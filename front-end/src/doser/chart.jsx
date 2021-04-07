@@ -2,6 +2,7 @@ import React from 'react'
 import { ResponsiveContainer, Tooltip, YAxis, XAxis, BarChart, Bar } from 'recharts'
 import { fetchDoserUsage } from '../redux/actions/doser'
 import { connect } from 'react-redux'
+import i18next from 'i18next'
 
 class chart extends React.Component {
   constructor (props) {
@@ -38,7 +39,7 @@ class chart extends React.Component {
         <ResponsiveContainer height={this.props.height} width='100%'>
           <BarChart data={this.props.usage.historical}>
             <Bar dataKey='pump' fill='#33b5e5' isAnimationActive={false} />
-            <YAxis label='seconds' />
+            <YAxis label={{ value: i18next.t('second_s'), angle: -90, position: 'insideLeft' }} />
             <XAxis dataKey='time' />
             <Tooltip />
           </BarChart>
