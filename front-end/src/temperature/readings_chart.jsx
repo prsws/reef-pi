@@ -4,6 +4,7 @@ import { fetchTCUsage } from '../redux/actions/tcs'
 import { connect } from 'react-redux'
 import i18next from 'i18next'
 import { TwoDecimalParse } from 'utils/two_decimal_parse'
+import { ParseXAxisDate } from 'utils/parse_x_axis_date'
 
 class chart extends React.Component {
   componentDidMount () {
@@ -43,7 +44,7 @@ class chart extends React.Component {
               </linearGradient>
             </defs>
             <YAxis dataKey='value' allowDecimals='false' domain={[c.ymin, c.ymax]} />
-            <XAxis dataKey='time' />
+            <XAxis dataKey='time' tickFormatter={timeStr => [ParseXAxisDate(timeStr)]} />
             <Tooltip formatter={(value, name) => [TwoDecimalParse(value), unit]} />
             <Area
               type='linear'

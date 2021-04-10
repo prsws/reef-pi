@@ -3,6 +3,7 @@ import { ResponsiveContainer, Tooltip, YAxis, XAxis, LineChart, Line } from 'rec
 import { fetchProbeReadings } from 'redux/actions/phprobes'
 import { connect } from 'react-redux'
 import { TwoDecimalParse } from 'utils/two_decimal_parse'
+import { ParseXAxisDate } from 'utils/parse_x_axis_date'
 
 class chart extends React.Component {
   componentDidMount () {
@@ -41,7 +42,7 @@ class chart extends React.Component {
         <ResponsiveContainer height={this.props.height}>
           <LineChart data={metrics}>
             <Line dataKey='value' stroke={c.color} isAnimationActive={false} dot={false} />
-            <XAxis dataKey='time' />
+            <XAxis dataKey='time' tickFormatter={timeStr => [ParseXAxisDate(timeStr)]} />
             <Tooltip formatter={(value, name) => [TwoDecimalParse(value), c.unit]} />
             <YAxis dataKey='value' domain={[c.ymin, c.ymax]} />
           </LineChart>

@@ -3,6 +3,7 @@ import { ResponsiveContainer, Line, Tooltip, YAxis, XAxis, LineChart } from 'rec
 import { fetchHealth } from './redux/actions/health'
 import { connect } from 'react-redux'
 import i18next from 'i18next'
+import { ParseXAxisDate } from 'utils/parse_x_axis_date'
 
 class healthChart extends React.Component {
   constructor (props) {
@@ -35,7 +36,7 @@ class healthChart extends React.Component {
           <LineChart data={healthStats}>
             <YAxis yAxisId='left' orientation='left' stroke='#00c851' />
             <YAxis yAxisId='right' orientation='right' stroke='#ffbb33' />
-            <XAxis dataKey='time' />
+            <XAxis dataKey='time' tickFormatter={timeStr => [ParseXAxisDate(timeStr)]} />
             <Tooltip />
             <Line dot={false} type='linear' dataKey='cpu' stroke='#00c851' isAnimationActive={false} yAxisId='left' />
             <Line dot={false} type='linear' dataKey='memory' stroke='#ffbb33' isAnimationActive={false} yAxisId='right' />
