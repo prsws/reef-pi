@@ -1,9 +1,11 @@
 export const ParseXAxisDate = (str) => {
-  const dateSplit = str.split('-')
-  const month = dateSplit[0]
-  const day = dateSplit[1]
-  const year = str.substring(str.length - 2, str.lenth)
-  const hour = dateSplit[2].substring(0, 5)
-  const parsedDate = (day + month + year + '-' + hour)
+  let parsedDate = str
+  if (str !== '' && str !== undefined && typeof str === 'string') {
+    const month = str.substr(0, 3)
+    const day = str.substr(4, 2)
+    const hour = str.substr(7, 5)
+    const year = str.substring(str.length - 2, str.length)
+    parsedDate = (day + month + year + '-' + hour)
+  }
   return parsedDate
 }
