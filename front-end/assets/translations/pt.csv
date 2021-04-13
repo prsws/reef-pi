@@ -3,14 +3,17 @@ add,Adicionar
 alerts,Alertas
 analog_input,Entrada Analogica
 analog_inputs,
+apr,
 are_you_sure,Como estas?
 ato,
+aug,
 cancel,cancelar
 charts,
 clear,Limpar
 color,
 columns,
 configure,Configurar
+dec,
 delete,Apagar
 disabled,desativar
 documentation,Documentação
@@ -22,6 +25,7 @@ enabled,activar
 end_time,
 equipment,
 errors,Erros
+feb,
 full_moon,
 health,
 height,
@@ -32,13 +36,20 @@ inlets,
 install,
 jack,
 jacks,
+jan,
+jul,
+jun,
 light,
 lights,
 loading,Carregar
+mar,
 maximum,
+may,
 minimum,
 name,Nome
 none,nenhum
+nov,
+oct,
 off,
 ok,Ok
 on,
@@ -56,6 +67,7 @@ sec,sec
 second_s,segundos
 select,Selecionar
 select_file,
+sep,
 since,Desde
 start_time,
 stayoffonboot,
