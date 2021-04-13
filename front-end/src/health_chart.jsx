@@ -4,6 +4,7 @@ import { fetchHealth } from './redux/actions/health'
 import { connect } from 'react-redux'
 import i18next from 'i18next'
 import { ParseXAxisDate } from 'utils/parse_x_axis_date'
+import { data } from 'jquery'
 
 class healthChart extends React.Component {
   constructor (props) {
@@ -24,6 +25,7 @@ class healthChart extends React.Component {
     }
   }
 
+
   render () {
     if (this.props.health_stats === undefined || this.props.health_stats.length <= 0) {
       return (<div />)
@@ -37,7 +39,7 @@ class healthChart extends React.Component {
             <YAxis yAxisId='left' orientation='left' stroke='#00c851' />
             <YAxis yAxisId='right' orientation='right' stroke='#ffbb33' />
             <XAxis dataKey='time' tickFormatter={timeStr => [ParseXAxisDate(timeStr)]} />
-            <Tooltip />
+            <Tooltip labelFormatter={label => [ParseXAxisDate(label)]} />
             <Line dot={false} type='linear' dataKey='cpu' stroke='#00c851' isAnimationActive={false} yAxisId='left' />
             <Line dot={false} type='linear' dataKey='memory' stroke='#ffbb33' isAnimationActive={false} yAxisId='right' />
           </LineChart>

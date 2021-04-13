@@ -45,7 +45,7 @@ class chart extends React.Component {
             </defs>
             <YAxis dataKey='value' allowDecimals='false' domain={[c.ymin, c.ymax]} />
             <XAxis dataKey='time' tickFormatter={timeStr => [ParseXAxisDate(timeStr)]} />
-            <Tooltip formatter={(value, name) => [TwoDecimalParse(value), unit]} />
+            <Tooltip labelFormatter={label => [ParseXAxisDate(label)]} formatter={(value, name) => [TwoDecimalParse(value), unit]} />
             <Area
               type='linear'
               dataKey='value'
