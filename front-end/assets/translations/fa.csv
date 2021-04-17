@@ -3,14 +3,17 @@ add,اضافه کردن
 alerts,هشدار
 analog_input,ورودی آنالوگ
 analog_inputs,
+apr,
 are_you_sure,شما مطمئن هستید
 ato,
+aug,
 cancel,لغو
 charts,
 clear,واضح
 color,
 columns,
 configure,پیکربندی
+dec,
 delete,حذف
 disabled,غیرفعال شده
 documentation,مستندات
@@ -22,6 +25,7 @@ enabled,فعال شده
 end_time,
 equipment,
 errors,خطاها
+feb,
 full_moon,
 health,
 height,
@@ -32,13 +36,20 @@ inlets,
 install,
 jack,
 jacks,
+jan,
+jul,
+jun,
 light,
 lights,
 loading,بارگذاری
+mar,
 maximum,
+may,
 minimum,
 name,نام
 none,هیچ یک
+nov,
+oct,
 off,
 ok,خوب
 on,
@@ -56,6 +67,7 @@ sec,
 second_s,
 select,انتخاب کنید
 select_file,
+sep,
 since,از آنجا که
 start_time,
 stayoffonboot,

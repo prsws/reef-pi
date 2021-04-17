@@ -3,14 +3,17 @@ add,Toevoegen
 alerts,Meldingen
 analog_input,Analoge Ingang
 analog_inputs,Analoge Ingangen
+apr,
 are_you_sure,Ben je zeker?
 ato,ato
+aug,
 cancel,Annuleren
 charts,
 clear,Resetten
 color,
 columns,
 configure,Instellen
+dec,
 delete,Verwijderen
 disabled,Uitgeschakeld
 documentation,Documentatie
@@ -22,6 +25,7 @@ enabled,Ingeschakeld
 end_time,
 equipment,Apparatuur
 errors,Foutmeldingen
+feb,
 full_moon,
 health,gezondheid
 height,
@@ -32,13 +36,20 @@ inlets,Ingangen (inlets)
 install,
 jack,Ingang (jack)
 jacks,Ingangen (jacks)
+jan,
+jul,
+jun,
 light,Light
 lights,Lichten
 loading,Laden
+mar,
 maximum,
+may,
 minimum,
 name,Naam
 none,Niets
+nov,
+oct,
 off,
 ok,Ok
 on,
@@ -56,6 +67,7 @@ sec,sec
 second_s,second(en)
 select,Selecteren
 select_file,
+sep,
 since,Sinds
 start_time,
 stayoffonboot,

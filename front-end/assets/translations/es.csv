@@ -3,14 +3,17 @@ add,Agregar
 alerts,Alertas
 analog_input,Entrada Análoga
 analog_inputs,Entradas Análoga
+apr,Abr
 are_you_sure,¿Esta Seguro?
 ato,ATO
+aug,Ago
 cancel,Cancelar
 charts,Gráficas
 clear,Limpiar
 color,Color
 columns,Columnas
 configure,Configurar
+dec,Dic
 delete,Eliminar
 disabled,Desactivar
 documentation,Documentación
@@ -22,6 +25,7 @@ enabled,Activar
 end_time,Hora de finalización
 equipment,Equipo
 errors,Errores
+feb,Feb
 full_moon,Luna Llena
 health,Estado
 height,Altura
@@ -32,13 +36,20 @@ inlets,Entradas
 install,Instalar
 jack,Enchufe
 jacks,Enchufes
+jan,Ene
+jul,Jul
+jun,Jun
 light,Luz
 lights,Luces
 loading,Cargando
+mar,Mar
 maximum,Máximo
+may,May
 minimum,Mínimo
 name,Nombre
 none,Ninguno
+nov,Nov
+oct,Oct
 off,Apagado
 ok,Ok
 on,Encendido
@@ -56,6 +67,7 @@ sec,seg
 second_s,segundo(s)
 select,Seleccionar
 select_file,Por favor seleccione un archivo
+sep,Sep
 since,Desde
 start_time,Hora de inicio
 stayoffonboot,¿Apagado al reiniciar?

@@ -3,6 +3,7 @@ import { ResponsiveContainer, Tooltip, YAxis, XAxis, BarChart, Bar } from 'recha
 import { fetchDoserUsage } from '../redux/actions/doser'
 import { connect } from 'react-redux'
 import i18next from 'i18next'
+import { ParseXAxisDate } from 'utils/parse_x_axis_date'
 
 class chart extends React.Component {
   constructor (props) {
@@ -40,8 +41,8 @@ class chart extends React.Component {
           <BarChart data={this.props.usage.historical}>
             <Bar dataKey='pump' fill='#33b5e5' isAnimationActive={false} />
             <YAxis label={{ value: i18next.t('second_s'), angle: -90, position: 'insideLeft' }} />
-            <XAxis dataKey='time' />
-            <Tooltip />
+            <XAxis dataKey='time' tickFormatter={timeStr => [ParseXAxisDate(timeStr)]} />
+            <Tooltip labelFormatter={label => [ParseXAxisDate(label)]} />
           </BarChart>
         </ResponsiveContainer>
       </>

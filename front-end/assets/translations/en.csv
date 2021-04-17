@@ -3,14 +3,17 @@ add,add
 alerts,Alerts
 analog_input,Analog Input
 analog_inputs,Analog Inputs
+apr,Apr
 are_you_sure,Are you sure?
 ato,ATO
+aug,Aug
 cancel,Cancel
 charts,Charts
 clear,Clear
 color,Color
 columns,Columns
 configure,Configure
+dec,Dec
 delete,Delete
 disabled,Disabled
 documentation,Documentation
@@ -22,6 +25,7 @@ enabled,Enabled
 end_time,End Time
 equipment,Equipment
 errors,Errors
+feb,Feb
 full_moon,Full Moon
 health,Health
 height,Height
@@ -33,13 +37,20 @@ inlets,Inlets
 install,Install
 jack,Jack
 jacks,Jacks
+jan,Jan
+jul,Jul
+jun,Jun
 light,Light
 lights,Lights
 loading,Loading
+mar,Mar
 maximum,Maximum
+may,May
 minimum,Minimum
 name,Name
 none,None
+nov,Nov
+oct,Oct
 off,Off
 ok,Ok
 on,On
@@ -57,6 +68,7 @@ sec,sec
 second_s,second(s)
 select,Select
 select_file,Please select a file
+sep,Sep
 since,since
 start_time,Start Time
 stayoffonboot,Stay Off On Boot?
