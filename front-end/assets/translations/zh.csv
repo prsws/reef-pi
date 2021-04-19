@@ -114,6 +114,7 @@ capabilities:log,日志
 capabilities:macro,宏命令
 capabilities:macros,宏命令
 capabilities:manager,实例
+capabilities:miscellaneous,
 capabilities:ph,PH值
 capabilities:temperature,温度
 capabilities:timers,计时器

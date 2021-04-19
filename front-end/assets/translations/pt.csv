@@ -114,6 +114,7 @@ capabilities:log,Log
 capabilities:macro,Macro
 capabilities:macros,Macros
 capabilities:manager,Instancias
+capabilities:miscellaneous,
 capabilities:ph,pH
 capabilities:temperature,Temperatura
 capabilities:timers,Timers

@@ -272,13 +272,6 @@ class settings extends React.Component {
         </div>
 
         <div className='row'>
-          {this.checkBoxComponent('notification')}
-          {this.checkBoxComponent('pprof')}
-          {this.checkBoxComponent('prometheus')}
-          {this.checkBoxComponent('cors')}
-        </div>
-
-        <div className='row'>
           <div className='col-12'>
             <label className='h5 font-weight-normal'>
               {i18n.t('capabilities:features')}
@@ -295,6 +288,17 @@ class settings extends React.Component {
             id='systemUpdateSettings'
             value={i18n.t('update')}
           />
+        </div>
+        <div className='row'>
+          <div className='col-12'>
+          <label className='h5 font-weight-normal'>
+              {i18n.t('capabilities:miscellaneous')}
+            </label>
+            {this.checkBoxComponent('notification')}
+            {this.checkBoxComponent('pprof')}
+            {this.checkBoxComponent('prometheus')}
+            {this.checkBoxComponent('cors')}
+          </div>
         </div>
       </div>
     )
