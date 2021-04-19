@@ -105,6 +105,7 @@ capabilities:dev_mode,Dev Mode
 capabilities:doser,Doseerpomp
 capabilities:dosing_pumps,Doseerpompen
 capabilities:equipment,Apparatuur
+capabilities:features,
 capabilities:health_check,Health check
 capabilities:journal,Dagboek
 capabilities:lighting,Belichting

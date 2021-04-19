@@ -105,6 +105,7 @@ capabilities:dev_mode,Mode développement
 capabilities:doser,Pompe doseuse
 capabilities:dosing_pumps,Pompes doseuses
 capabilities:equipment,Equipement
+capabilities:features,
 capabilities:health_check,Santé du système
 capabilities:journal,
 capabilities:lighting,Éclairage

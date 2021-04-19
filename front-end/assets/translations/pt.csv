@@ -105,6 +105,7 @@ capabilities:dev_mode,Dev Mode
 capabilities:doser,Dose
 capabilities:dosing_pumps,Bombas Doseadoras
 capabilities:equipment,Equipamento
+capabilities:features,
 capabilities:health_check,Verificação de Estado
 capabilities:journal,
 capabilities:lighting,Iluminação

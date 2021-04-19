@@ -281,7 +281,7 @@ class settings extends React.Component {
         <div className='row'>
           <div className='col-12'>
             <label className='h5 font-weight-normal'>
-              {i18n.t('capabilities')}
+              {i18n.t('capabilities:features')}
             </label>
             {this.showCapabilities()}
           </div>
