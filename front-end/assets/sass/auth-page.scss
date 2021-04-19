@@ -7,11 +7,11 @@ body,html,#main-panel {
 }
 #main-panel {
   &.auth-page{
-    background-color: rgb(237, 248, 232);
+    background-color: $auth-page-main-panel-background-color;
   }
 }
 .auth-page{
   .reef-pi-title{
-    color: #2e2e2e;
+    color: $auth-page-reef-pi-title-color;
   }
 }
