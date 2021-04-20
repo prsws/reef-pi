@@ -106,6 +106,7 @@ capabilities:doser,Dosificador
 capabilities:dosing_pumps,Dosificadores
 capabilities:equipment,Equipos
 capabilities:features,Funcionalidad
+capabilities:general,General
 capabilities:health_check,Chequeo del Sistema
 capabilities:journal,Diario
 capabilities:lighting,Iluminación
@@ -118,6 +119,7 @@ capabilities:miscellaneous,Miscelaneos
 capabilities:ph,pH
 capabilities:temperature,Temperatura
 capabilities:timers,Cronómetro
+capabilities:ui,Interfaz de Usuario
 collapsible:delete,Eliminar
 collapsible:edit,Editar
 color_picker:choose,Elegir

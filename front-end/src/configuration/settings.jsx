@@ -212,15 +212,18 @@ class settings extends React.Component {
 
     return (
       <div className='container'>
-        <div className='row'>
+        <div className='row' style={{ border: '1px solid black', marginBottom: '3px' }}>
           <div className='col-12'>
+            <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>
+              {i18n.t('capabilities:general')}
+            </label>
             <div className='row'>
-              <div className='col-lg-6 col-sm-12 h6 font-weight-bold'>{this.toRow('name')}</div>
-              <div className='col-lg-6 col-sm-12 h6 font-weight-bold'>{this.toRow('interface')}</div>
+              <div className='col-lg-6 col-sm-12 h6'>{this.toRow('name')}</div>
+              <div className='col-lg-6 col-sm-12 h6'>{this.toRow('interface')}</div>
             </div>
             <div className='row'>
               <div className='col-lg-6 col-sm-12'>
-                <div className='form-group h6 font-weight-bold'>
+                <div className='form-group h6'>
                   <label htmlFor='to-row-address'> {i18n.t('configuration:settings:address')}</label>
                   <div className='input-group'>
                     <div className='input-group-prepend'>
@@ -242,11 +245,11 @@ class settings extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className='col-lg-6 col-sm-12 h6 font-weight-bold'>{this.toRow('rpi_pwm_freq')}</div>
+              <div className='col-lg-6 col-sm-12 h6'>{this.toRow('rpi_pwm_freq')}</div>
             </div>
             <div className='row'>
               <div className='col'>
-                <div className='form-group h6 font-weight-bold'>
+                <div className='form-group h6'>
                   <label htmlFor='app-language'>{i18n.t('language:language')}</label>
                   <select value={this.state.currentLanguage} onChange={this.handleSetLang} id='app-language' className='form-control'>
                     <option value='en'>{i18n.t('language:en')}</option>
@@ -265,25 +268,34 @@ class settings extends React.Component {
             </div>
           </div>
         </div>
-        <div className='row'>
+        <div className='row' style={{ border: '1px solid black', marginBottom: '3px' }}>
           <div className='col-12'>
             <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>
               {i18n.t('capabilities:features')}
             </label>
             {this.showCapabilities()}
+            {this.showHealthNotify()}
           </div>
         </div>
-        <div className='row'>{this.showHealthNotify()}</div>
-        <div className='row'>
+        <div className='row' style={{ border: '1px solid black', marginBottom: '3px' }}>
           <div className='col-12'>
-            <label className='h6 font-weight-bold'style={{ textDecoration:'underline' }} >
+            <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>
               {i18n.t('capabilities:miscellaneous')}
             </label>
-            {this.checkBoxComponent('display')}
-            {this.checkBoxComponent('notification')}
-            {this.checkBoxComponent('pprof')}
-            {this.checkBoxComponent('prometheus')}
-            {this.checkBoxComponent('cors')}
+            <div>
+              {this.checkBoxComponent('Display')}
+              {this.checkBoxComponent('Notification')}
+              {this.checkBoxComponent('PProf')}
+              {this.checkBoxComponent('Prometheus')}
+              {this.checkBoxComponent('CORS')}
+            </div>
+          </div>
+        </div>
+        <div className='row' style={{ border: '1px solid black', marginBottom: '3px' }}>
+          <div className='col-12'>
+            <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>
+              {i18n.t('capabilities:ui')}
+            </label>
           </div>
         </div>
         <div className='row'>

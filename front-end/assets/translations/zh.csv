@@ -106,6 +106,7 @@ capabilities:doser,滴定
 capabilities:dosing_pumps,滴定泵
 capabilities:equipment,设备
 capabilities:features,
+capabilities:general,
 capabilities:health_check,健康检查
 capabilities:journal,
 capabilities:lighting,灯光
@@ -118,6 +119,7 @@ capabilities:miscellaneous,
 capabilities:ph,PH值
 capabilities:temperature,温度
 capabilities:timers,计时器
+capabilities:ui,
 collapsible:delete,删除
 collapsible:edit,编辑
 color_picker:choose,选择

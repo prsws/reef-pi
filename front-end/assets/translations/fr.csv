@@ -106,6 +106,7 @@ capabilities:doser,Pompe doseuse
 capabilities:dosing_pumps,Pompes doseuses
 capabilities:equipment,Equipement
 capabilities:features,
+capabilities:general,
 capabilities:health_check,Santé du système
 capabilities:journal,
 capabilities:lighting,Éclairage
@@ -118,6 +119,7 @@ capabilities:miscellaneous,
 capabilities:ph,pH
 capabilities:temperature,Temperature
 capabilities:timers,Minuteries
+capabilities:ui,
 collapsible:delete,
 collapsible:edit,
 color_picker:choose,

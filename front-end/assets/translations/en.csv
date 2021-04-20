@@ -107,6 +107,7 @@ capabilities:doser,Doser
 capabilities:dosing_pumps,Dosing
 capabilities:equipment,Equipment
 capabilities:features,Features
+capabilities:general,General
 capabilities:health_check,Health check
 capabilities:journal,Journal
 capabilities:lighting,Lighting
@@ -119,6 +120,7 @@ capabilities:miscellaneous,Miscellaneous
 capabilities:ph,pH
 capabilities:temperature,Temperature
 capabilities:timers,Timers
+capabilities:ui,User Interface
 collapsible:delete,Delete
 collapsible:edit,Edit
 color_picker:choose,Choose

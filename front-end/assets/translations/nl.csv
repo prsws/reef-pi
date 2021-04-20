@@ -106,6 +106,7 @@ capabilities:doser,Doseerpomp
 capabilities:dosing_pumps,Doseerpompen
 capabilities:equipment,Apparatuur
 capabilities:features,
+capabilities:general,
 capabilities:health_check,Health check
 capabilities:journal,Dagboek
 capabilities:lighting,Belichting
@@ -118,6 +119,7 @@ capabilities:miscellaneous,
 capabilities:ph,pH
 capabilities:temperature,Temperatuur
 capabilities:timers,Timers
+capabilities:ui,
 collapsible:delete,Verwijderen
 collapsible:edit,Bewerken
 color_picker:choose,Kies
