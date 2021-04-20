@@ -151,7 +151,7 @@ configuration:settings:name_required,Nom requis
 configuration:settings:network_address_required,Adresse réseau requise
 configuration:settings:network_interface_required,Interface réseau requise
 configuration:settings:notification,Notification
-configuration:settings:rpi_pwm_freq,Fréquence RPI PWM
+configuration:settings:rpi_pwm_freq,Fréquence PWM RPi
 configuration:settings:use_https,Utiliser HTTPS
 configuration:tab:about,À propos
 configuration:tab:admin,Administration

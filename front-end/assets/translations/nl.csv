@@ -151,7 +151,7 @@ configuration:settings:name_required,Naam is nodig
 configuration:settings:network_address_required,Netwerkadres is nodig
 configuration:settings:network_interface_required,Netwerkinterface is nodig
 configuration:settings:notification,Notificatie
-configuration:settings:rpi_pwm_freq,Rpi Pwm Frequencie
+configuration:settings:rpi_pwm_freq,RPi PWM Frequencie
 configuration:settings:use_https,Gebruik HTTPS
 configuration:tab:about,Over
 configuration:tab:admin,Admin
