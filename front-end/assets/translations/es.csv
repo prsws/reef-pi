@@ -140,6 +140,8 @@ configuration:authentication:error_pass,Proporcione una contraseña
 configuration:authentication:error_user,Proporcione un nombre de usuario
 configuration:settings:address,Direccion
 configuration:settings:alert_health_check,Alerta de estado
+configuration:settings:blank_panel_bgcolor,Panel No Asignado Color de Fondo
+configuration:settings:blank_panel_titlecolor,Panel No Asignado Color de Título
 configuration:settings:capabilities,Funciones
 configuration:settings:capabilities_required,Al menos una Funcion es requerida
 configuration:settings:display,Pantalla
@@ -171,6 +173,7 @@ cron:second,Segundo
 cron:week,Semana
 dashboard:back_to_dashboard,Volver al dashboard
 dashboard:blank_panel,Sin Asignar (En Blanco)
+dashboard:blank_panel_title,No Asignado
 equipment:chart:barchart,Equipo(Gráfica de Barras)
 equipment:chart:ctrlpanel,Equipo(Panel de Interruptores)
 cron:week,Semana

@@ -141,6 +141,8 @@ configuration:authentication:error_pass,You Must Provide a password
 configuration:authentication:error_user,You Must Provide a username
 configuration:settings:address,Address
 configuration:settings:alert_health_check,Alert on health check
+configuration:settings:blank_panel_bgcolor,Unassigned Panel Background Color
+configuration:settings:blank_panel_titlecolor,Unassigned Panel Title Color
 configuration:settings:capabilities,Capabilities
 configuration:settings:capabilities_required,Capabilities is required
 configuration:settings:display,Display
@@ -172,6 +174,7 @@ cron:second,Second
 cron:week,Day of the week
 dashboard:back_to_dashboard,Back to dashboard
 dashboard:blank_panel,Unassigned (Blank)
+dashboard:blank_panel_title,Unassigned
 equipment:chart:barchart,Equipment(Bar Chart)
 equipment:chart:ctrlpanel,Equipment(Switch Panel)
 fatal_error:connection_lost,Connection Lost

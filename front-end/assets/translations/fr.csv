@@ -140,6 +140,8 @@ configuration:authentication:error_pass,Vous devez fournir un mot de passe
 configuration:authentication:error_user,Vous devez fournir un nom d'utilisateur
 configuration:settings:address,Adresse
 configuration:settings:alert_health_check,Alerte de santé du système
+configuration:settings:blank_panel_bgcolor,
+configuration:settings:blank_panel_titlecolor,
 configuration:settings:capabilities,Capacités
 configuration:settings:capabilities_required,Capacité requise
 configuration:settings:display,Affichage
@@ -171,6 +173,7 @@ cron:second,
 cron:week,
 dashboard:back_to_dashboard,Retour au Tableau de bord
 dashboard:blank_panel,
+dashboard:blank_panel_title,
 equipment:chart:barchart,
 equipment:chart:ctrlpanel,
 fatal_error:connection_lost,

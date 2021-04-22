@@ -17,7 +17,9 @@ class settings extends React.Component {
         name: '',
         interface: '',
         address: '',
-        rpi_pwm_freq: 100
+        rpi_pwm_freq: 100,
+        blank_panel_bgcolor: '',
+        blank_panel_titlecolor: ''
       },
       currentLanguage: i18n.language,
       updated: false
@@ -35,6 +37,8 @@ class settings extends React.Component {
     this.handleSetProtocolHttp = this.handleSetProtocolHttp.bind(this)
     this.handleSetProtocolHttps = this.handleSetProtocolHttps.bind(this)
     this.checkBoxComponent = this.checkBoxComponent.bind(this)
+    this.handleSetBPBgColor = this.handleSetBPBgColor.bind(this)
+    this.handleSetBPTitleColor = this.handleSetBPTitleColor.bind(this)
   }
 
   checkBoxComponent (attr) {
@@ -129,6 +133,24 @@ class settings extends React.Component {
     })
   }
 
+  handleSetBPBgColor (ev) {
+    const settings = this.state.settings
+    settings.blank_panel_bgcolor = ev.target.value
+    this.setState({
+      settings: settings,
+      updated: true
+    })
+  }
+
+  handleSetBPTitleColor (ev) {
+    const settings = this.state.settings
+    settings.blank_panel_titlecolor = ev.target.value
+    this.setState({
+      settings: settings,
+      updated: true
+    })
+  }
+
   showDisplay () {
     if (!this.state.settings.display) {
       return
@@ -209,7 +231,6 @@ class settings extends React.Component {
     if (this.state.updated) {
       updateButtonClass = 'btn btn-outline-danger col-xs-12 col-md-3 offset-md-9'
     }
-
     return (
       <div className='container'>
         <div className='row' style={{ border: '1px solid black', marginBottom: '3px' }}>
@@ -282,10 +303,10 @@ class settings extends React.Component {
             <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>
               {i18n.t('capabilities:miscellaneous')}
             </label>
-            <div>
+            <div className='row' style={{ paddingLeft: '1em' }}>
               {this.checkBoxComponent('Display')}
               {this.checkBoxComponent('Notification')}
-              {this.checkBoxComponent('PProf')}
+              {this.checkBoxComponent('Pprof')}
               {this.checkBoxComponent('Prometheus')}
               {this.checkBoxComponent('CORS')}
             </div>
@@ -296,6 +317,11 @@ class settings extends React.Component {
             <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>
               {i18n.t('capabilities:ui')}
             </label>
+            <div className='row'>
+              <div className='col-lg-6 col-sm-12 h6'>{this.toRow(i18n.t('blank_panel_bgcolor'))}</div>
+              <div className='col-lg-6 col-sm-12 h6'>{this.toRow(i18n.t('blank_panel_titlecolor'))}</div>
+            </div>
+
           </div>
         </div>
         <div className='row'>

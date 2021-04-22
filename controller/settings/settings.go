@@ -2,18 +2,20 @@ package settings
 
 //swagger:model settings
 type Settings struct {
-	Name         string            `json:"name"`
-	Interface    string            `json:"interface"`
-	Address      string            `json:"address"`
-	Display      bool              `json:"display"`
-	Notification bool              `json:"notification"`
-	Capabilities Capabilities      `json:"capabilities"`
-	HealthCheck  HealthCheckNotify `json:"health_check"`
-	HTTPS        bool              `json:"https"`
-	Pprof        bool              `json:"pprof"`
-	RPI_PWMFreq  int               `json:"rpi_pwm_freq"`
-	Prometheus   bool              `json:"prometheus"`
-	CORS         bool              `json:"cors"`
+	Name          string            `json:"name"`
+	Interface     string            `json:"interface"`
+	Address       string            `json:"address"`
+	Display       bool              `json:"display"`
+	Notification  bool              `json:"notification"`
+	Capabilities  Capabilities      `json:"capabilities"`
+	HealthCheck   HealthCheckNotify `json:"health_check"`
+	HTTPS         bool              `json:"https"`
+	Pprof         bool              `json:"pprof"`
+	RPI_PWMFreq   int               `json:"rpi_pwm_freq"`
+	Prometheus    bool              `json:"prometheus"`
+	CORS          bool              `json:"cors"`
+	BP_BgColor    string            `json:"blank_panel_bgcolor"`
+	BP_TitleColor string            `json:"blank_panel_titlecolor"`
 }
 
 var DefaultSettings = Settings{

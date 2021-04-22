@@ -140,6 +140,8 @@ configuration:authentication:error_pass,Geef een passwoord in
 configuration:authentication:error_user,Geef een gebruikersnaam in
 configuration:settings:address,Adres
 configuration:settings:alert_health_check,Alarm bij health check
+configuration:settings:blank_panel_bgcolor,
+configuration:settings:blank_panel_titlecolor,
 configuration:settings:capabilities,Opties
 configuration:settings:capabilities_required,Opties is nodig
 configuration:settings:display,Display
@@ -171,6 +173,7 @@ cron:second,Seconde
 cron:week,Week
 dashboard:back_to_dashboard,Terug naar dashboard
 dashboard:blank_panel,
+dashboard:blank_panel_title,
 equipment:chart:barchart,
 equipment:chart:ctrlpanel,
 fatal_error:connection_lost,Connectie verloren

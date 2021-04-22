@@ -140,6 +140,8 @@ configuration:authentication:error_pass,你必须提供一个密码
 configuration:authentication:error_user,你必须提供一个用户名
 configuration:settings:address,日志
 configuration:settings:alert_health_check,健康检查警告
+configuration:settings:blank_panel_bgcolor,
+configuration:settings:blank_panel_titlecolor,
 configuration:settings:capabilities,功能
 configuration:settings:capabilities_required,必须填写功能
 configuration:settings:display,显示
@@ -171,6 +173,7 @@ cron:second,秒
 cron:week,周
 dashboard:back_to_dashboard,回到面板
 dashboard:blank_panel,
+dashboard:blank_panel_title,
 equipment:chart:barchart,
 equipment:chart:ctrlpanel,
 fatal_error:connection_lost,连接丢失

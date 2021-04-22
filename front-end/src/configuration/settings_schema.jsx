@@ -17,7 +17,9 @@ const SettingsSchema = Yup.object().shape({
   https: Yup.bool(),
   pprof: Yup.bool(),
   prometheus: Yup.bool(),
-  rpi_pwm_freq: Yup.number().positive().integer()
+  rpi_pwm_freq: Yup.number().positive().integer(),
+  blank_panel_bgcolor: Yup.string().default('#ffffff'),
+  blank_panel_titlecolor: Yup.string().default('#aaaaaa')
 })
 
 export default SettingsSchema

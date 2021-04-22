@@ -140,6 +140,8 @@ configuration:authentication:error_pass,Tens que inserir uma password
 configuration:authentication:error_user,Tens que inserir um nome de utilizador
 configuration:settings:address,Endereço
 configuration:settings:alert_health_check,Avisos de Estado Geral
+configuration:settings:blank_panel_bgcolor,
+configuration:settings:blank_panel_titlecolor,
 configuration:settings:capabilities,Capacidades
 configuration:settings:capabilities_required,Capabilities são requeridads
 configuration:settings:display,Ecrã
@@ -171,6 +173,7 @@ cron:second,Segundos
 cron:week,
 dashboard:back_to_dashboard,Voltas ao  Painel Inicial
 dashboard:blank_panel,
+dashboard:blank_panel_title,
 equipment:chart:barchart,
 equipment:chart:ctrlpanel,
 fatal_error:connection_lost,Ligação Perdida
