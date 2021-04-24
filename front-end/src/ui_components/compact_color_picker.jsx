@@ -1,10 +1,10 @@
 import React from 'react'
-import { HuePicker } from 'react-color'
+import { CompactPicker } from 'react-color'
 import PropTypes from 'prop-types'
 import i18next from 'i18next'
 import { invertColor } from 'utils/invert_color'
 
-class ColorPicker extends React.Component {
+class CompactColorPicker extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -40,7 +40,7 @@ class ColorPicker extends React.Component {
       )
     }
     return (
-      <HuePicker
+      <CompactPicker
         name={this.props.name}
         className='mt-2'
         color={this.state.color}
@@ -50,11 +50,11 @@ class ColorPicker extends React.Component {
   }
 }
 
-ColorPicker.propTypes = {
+CompactColorPicker.propTypes = {
   name: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   readOnly: PropTypes.bool,
   onChangeHandler: PropTypes.func.isRequired
 }
 
-export default ColorPicker
+export default CompactColorPicker

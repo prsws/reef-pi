@@ -122,7 +122,7 @@ capabilities:timers,Cronómetro
 capabilities:ui,Interfaz de Usuario
 collapsible:delete,Eliminar
 collapsible:edit,Editar
-color_picker:choose,Elegir
+color_picker:choose,Elegir Color
 configuration:about:current_time,Fecha Actual
 configuration:about:modifications,Modificaciones por
 configuration:about:status,Status

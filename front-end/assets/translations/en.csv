@@ -123,7 +123,7 @@ capabilities:timers,Timers
 capabilities:ui,User Interface
 collapsible:delete,Delete
 collapsible:edit,Edit
-color_picker:choose,Choose
+color_picker:choose,Choose Color
 configuration:about:current_time,Current time
 configuration:about:status,Status
 configuration:about:uptime,Uptime

@@ -7,6 +7,7 @@ import { updateSettings, fetchSettings } from 'redux/actions/settings'
 import { connect } from 'react-redux'
 import SettingsSchema from './settings_schema'
 import i18n from 'utils/i18n'
+import CompactColorPicker from '../ui_components/compact_color_picker'
 
 class settings extends React.Component {
   constructor (props) {
@@ -29,7 +30,7 @@ class settings extends React.Component {
     this.updateCapabilities = this.updateCapabilities.bind(this)
     this.handleUpdate = this.handleUpdate.bind(this)
     this.showDisplay = this.showDisplay.bind(this)
-    this.toRow = this.toRow.bind(this)
+    this.toTextRow = this.toTextRow.bind(this)
     this.updateHealthNotify = this.updateHealthNotify.bind(this)
     this.showHealthNotify = this.showHealthNotify.bind(this)
     this.handleSetLang = this.handleSetLang.bind(this)
@@ -39,6 +40,7 @@ class settings extends React.Component {
     this.checkBoxComponent = this.checkBoxComponent.bind(this)
     this.handleSetBPBgColor = this.handleSetBPBgColor.bind(this)
     this.handleSetBPTitleColor = this.handleSetBPTitleColor.bind(this)
+    this.toCompactColorPickerRow = this.toCompactColorPickerRow.bind(this)
   }
 
   checkBoxComponent (attr) {
@@ -192,7 +194,7 @@ class settings extends React.Component {
     this.props.fetchSettings()
   }
 
-  toRow (label) {
+  toTextRow (label) {
     const fn = function (ev) {
       const settings = this.state.settings
       settings[label] = ev.target.value
@@ -210,6 +212,27 @@ class settings extends React.Component {
           onChange={fn}
           value={this.state.settings[label]}
           id={'to-row-' + label}
+        />
+      </div>
+    )
+  }
+
+  toCompactColorPickerRow (label) {
+    const fn = function (ev) {
+      const settings = this.state.settings
+      settings[label] = ev.target.value
+      this.setState({
+        settings: settings,
+        updated: true
+      })
+    }.bind(this)
+    return (
+      <div className='form-group'>
+        <label htmlFor={'to-row-' + label}> {i18n.t(`configuration:settings:${label}`)}</label>
+        <CompactColorPicker
+          name={'to-row-' + label}
+          color={this.state.settings[label]}
+          onChangeHandler={fn}
         />
       </div>
     )
@@ -233,14 +256,14 @@ class settings extends React.Component {
     }
     return (
       <div className='container'>
-        <div className='row' style={{ border: '1px solid black', marginBottom: '3px' }}>
+        <div className='row' style={{ border: '1px solid black', marginBottom: '3px', backgroundColor: '#eeeeee' }}>
           <div className='col-12'>
             <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>
               {i18n.t('capabilities:general')}
             </label>
             <div className='row'>
-              <div className='col-lg-6 col-sm-12 h6'>{this.toRow('name')}</div>
-              <div className='col-lg-6 col-sm-12 h6'>{this.toRow('interface')}</div>
+              <div className='col-lg-6 col-sm-12 h6'>{this.toTextRow('name')}</div>
+              <div className='col-lg-6 col-sm-12 h6'>{this.toTextRow('interface')}</div>
             </div>
             <div className='row'>
               <div className='col-lg-6 col-sm-12'>
@@ -266,7 +289,7 @@ class settings extends React.Component {
                   </div>
                 </div>
               </div>
-              <div className='col-lg-6 col-sm-12 h6'>{this.toRow('rpi_pwm_freq')}</div>
+              <div className='col-lg-6 col-sm-12 h6'>{this.toTextRow('rpi_pwm_freq')}</div>
             </div>
             <div className='row'>
               <div className='col'>
@@ -289,7 +312,7 @@ class settings extends React.Component {
             </div>
           </div>
         </div>
-        <div className='row' style={{ border: '1px solid black', marginBottom: '3px' }}>
+        <div className='row' style={{ border: '1px solid black', marginBottom: '3px', backgroundColor: '#eeeeee' }}>
           <div className='col-12'>
             <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>
               {i18n.t('capabilities:features')}
@@ -298,7 +321,7 @@ class settings extends React.Component {
             {this.showHealthNotify()}
           </div>
         </div>
-        <div className='row' style={{ border: '1px solid black', marginBottom: '3px' }}>
+        <div className='row' style={{ border: '1px solid black', marginBottom: '3px', backgroundColor: '#eeeeee' }}>
           <div className='col-12'>
             <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>
               {i18n.t('capabilities:miscellaneous')}
@@ -312,16 +335,15 @@ class settings extends React.Component {
             </div>
           </div>
         </div>
-        <div className='row' style={{ border: '1px solid black', marginBottom: '3px' }}>
+        <div className='row' style={{ border: '1px solid black', marginBottom: '3px', backgroundColor: '#eeeeee' }}>
           <div className='col-12'>
             <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>
               {i18n.t('capabilities:ui')}
             </label>
             <div className='row'>
-              <div className='col-lg-6 col-sm-12 h6'>{this.toRow(i18n.t('blank_panel_bgcolor'))}</div>
-              <div className='col-lg-6 col-sm-12 h6'>{this.toRow(i18n.t('blank_panel_titlecolor'))}</div>
+              <div className='col-lg-6 col-sm-12 h6'>{this.toCompactColorPickerRow(i18n.t('blank_panel_bgcolor'))}</div>
+              <div className='col-lg-6 col-sm-12 h6'>{this.toCompactColorPickerRow(i18n.t('blank_panel_titlecolor'))}</div>
             </div>
-
           </div>
         </div>
         <div className='row'>
