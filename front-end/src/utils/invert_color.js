@@ -1,5 +1,5 @@
 export function invertColor (hex) {
-  if (hex === undefined) {
+  if (hex === undefined || hex === '') {
     return '#000000'
   }
   if (hex.indexOf('#') === 0) {

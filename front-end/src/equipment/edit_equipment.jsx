@@ -50,7 +50,7 @@ const EditEquipment = ({
     <form onSubmit={handleSubmit}>
       <div className='row align-items-start'>
         {deleteAction()}
-        <div className='col-12 col-sm-4 col-lg-4 order-sm-1'>
+        <div className='col-12 col-sm-3 col-lg-3 order-sm-1'>
           <label className='mr-2'>{i18next.t('name')}</label>
           <input
             type='text'
@@ -62,8 +62,8 @@ const EditEquipment = ({
           />
           <ErrorFor errors={errors} touched={touched} name='name' />
         </div>
-        <div className='col-12 col-sm-4 col-lg-4 order-sm-2'>
-          <label className='mr-2'>Outlet</label>
+        <div className='col-12 col-sm-3 col-lg-3 order-sm-2'>
+          <label className='mr-2'>{i18next.t('outlet')}</label>
           <select
             name='outlet'
             onChange={handleChange}
@@ -86,7 +86,7 @@ const EditEquipment = ({
           </select>
           <ErrorFor errors={errors} touched={touched} name='outlet' />
         </div>
-        <div className='col-12 col-sm-4 col-lg-4 order-sm-3'>
+        <div className='col-12 col-sm-3 col-lg-3 order-sm-3'>
           <label className='mr-2'>{i18next.t('stayoffonboot')}</label>
           <input
             type='checkbox'

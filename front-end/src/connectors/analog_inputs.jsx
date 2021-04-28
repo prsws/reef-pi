@@ -109,7 +109,7 @@ class analogInputs extends React.Component {
       <div className='container'>
         <div className='row mb-1'>
           <div className='col-12'>
-            <label className='h6'>{i18next.t('analog_inputs')}</label>
+            <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>{i18next.t('analog_inputs')}</label>
             {this.list()}
           </div>
         </div>
@@ -120,7 +120,7 @@ class analogInputs extends React.Component {
               type='button'
               value={this.state.add ? '-' : '+'}
               onClick={this.handleAdd}
-              className='btn btn-sm btn-outline-success'
+              className='btn btn-sm btn-outline-success mb-3'
             />
           </div>
         </div>

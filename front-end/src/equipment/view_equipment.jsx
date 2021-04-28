@@ -16,7 +16,7 @@ const ViewEquipment = ({ equipment, outletName, onStateChange, onDelete, onEdit 
 
   return (
     <div className='row text-center text-md-left'>
-      <div className='col-12 col-sm-6 col-md-4 col-lg-3 order-sm-2 order-md-last'>
+      <div className='col-12 col-sm-6 col-md-4 col-lg-2 order-sm-2 order-md-last order-sm-last'>
         <button
           type='button' onClick={onDelete}
           className='btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2'
@@ -30,20 +30,21 @@ const ViewEquipment = ({ equipment, outletName, onStateChange, onDelete, onEdit 
           {i18next.t('edit')}
         </button>
       </div>
-      <div className='col-12 col-sm-6 col-md-3 order-sm-1'>
+      <div className='col-12 col-sm-6 col-md-3 col-lg-2 order-sm-1'>
         <b>{equipment.name}</b>
       </div>
-      <div className='col-12 col-sm-6 col-md-3 col-lg-3 order-sm-4'>
-        {outletName}
+      <div className='col-12 col-sm-6 col-md-3 col-lg-2 order-sm-4'>
+        <em>{i18next.t('outlet')}:&nbsp;</em> {outletName}
       </div>
-      <div className='col-12 col-sm-6 col-md-2 col-lg-3 order-sm-3'>
+      <div className='col-12 col-sm-6 col-md-2 col-lg-2 order-sm-3'>
+        <em>{i18next.t('status')}&nbsp;</em>
         <Switch onClick={toggleState} on={equipment.on}>
           <small className='ml-1 align-top'>{equipment.on ? 'on' : 'off'}</small>
         </Switch>
       </div>
-      <div className='col-12 col-sm-6 col-md-2 col-lg-2 order-sm-4'>
-        <div className='form-group'>
-          <span className='input-group-addon'> {i18next.t('stayoffonboot')} </span>
+      <div className='col-12 col-sm-6 col-md-2 col-lg-3 order-sm-4'>
+        <div className='input-group input-group-sm'>
+          <em>{i18next.t('stayoffonboot')}</em>
           <input
             type='checkbox'
             id='stayOffOnBoot'
