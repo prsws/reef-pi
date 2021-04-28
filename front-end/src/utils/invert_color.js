@@ -1,4 +1,7 @@
 export function invertColor (hex) {
+  if (hex === undefined) {
+    return '#000000'
+  }
   if (hex.indexOf('#') === 0) {
     hex = hex.slice(1)
   }

@@ -87,6 +87,7 @@ func (c *Controller) GetModel() string {
 		log.Println("Failed to detect Raspberry Pi version. Error:", err)
 		return "unknown"
 	}
-	return strings.TrimSpace(string(data))
+	modelName := strings.TrimSpace(string(data))
+	return strings.TrimRight(modelName, "\u0000")
 
 }

@@ -21,22 +21,36 @@ import ErrorBoundary from './ui_components/error_boundary'
 import i18n from 'utils/i18n'
 import Instances from 'instances/main'
 import Journal from 'journal/main'
+import { ThermometerHalf,
+        ClockHistory,
+        Gear,
+        Sun,
+        Water,
+        Eyedropper,
+        JournalText,
+        Speedometer,
+        SortDown,
+        CardText,
+        Moisture,
+        CameraVideo,
+        Plug } from 'react-bootstrap-icons'
+
 
 const caps = {
-  dashboard: { label: i18n.t('capabilities:dashboard'), component: <Dashboard /> },
-  equipment: { label: i18n.t('capabilities:equipment'), component: <Equipment /> },
-  timers: { label: i18n.t('capabilities:timers'), component: <Timers /> },
-  lighting: { label: i18n.t('capabilities:lights'), component: <Lighting /> },
-  temperature: { label: i18n.t('capabilities:temperature'), component: <Temperature /> },
-  ato: { label: i18n.t('capabilities:ato'), component: <Ato /> },
-  ph: { label: i18n.t('capabilities:ph'), component: <Ph /> },
-  doser: { label: i18n.t('capabilities:dosing_pumps'), component: <Doser /> },
-  macro: { label: i18n.t('capabilities:macros'), component: <Macro /> },
-  camera: { label: i18n.t('capabilities:camera'), component: <Camera /> },
+  dashboard: { label: i18n.t('capabilities:dashboard'), icon: <Speedometer />,  component: <Dashboard /> },
+  equipment: { label: i18n.t('capabilities:equipment'), icon: <Plug />, component: <Equipment /> },
+  timers: { label: i18n.t('capabilities:timers'), icon: <ClockHistory />, component: <Timers /> },
+  lighting: { label: i18n.t('capabilities:lights'), icon: <Sun />, component: <Lighting /> },
+  temperature: { label: i18n.t('capabilities:temperature'), icon: <ThermometerHalf />, component: <Temperature /> },
+  ato: { label: i18n.t('capabilities:ato'), icon: <Water />, component: <Ato /> },
+  ph: { label: i18n.t('capabilities:ph'), icon: <Moisture />, component: <Ph /> },
+  doser: { label: i18n.t('capabilities:dosing_pumps'), icon: <Eyedropper />, component: <Doser /> },
+  macro: { label: i18n.t('capabilities:macros'), icon: <SortDown />, component: <Macro /> },
+  camera: { label: i18n.t('capabilities:camera'), icon: <CameraVideo />, component: <Camera /> },
   manager: { label: i18n.t('capabilities:manager'), component: <Instances /> },
-  journal: { label: i18n.t('capabilities:journal'), component: <Journal /> },
-  configuration: { label: i18n.t('capabilities:configuration'), component: <Configuration /> },
-  log: { label: i18n.t('capabilities:log'), component: <Log /> }
+  journal: { label: i18n.t('capabilities:journal'), icon: <JournalText />, component: <Journal /> },
+  configuration: { label: i18n.t('capabilities:configuration'), icon: <Gear />, component: <Configuration /> },
+  log: { label: i18n.t('capabilities:log'), icon: <CardText />, component: <Log /> }
 }
 
 class mainPanel extends React.Component {
@@ -74,10 +88,11 @@ class mainPanel extends React.Component {
       }
       const cname = prop === tab ? 'nav-link active' : 'nav-link'
       const label = caps[prop].label
+      const icon = caps[prop].icon
       panels.push(
         <li className='nav-item' key={'li-tab-' + prop}>
           <a href='#' id={'tab-' + prop} className={cname} onClick={this.setTab(prop)}>
-            {label}
+            {icon} {label}
           </a>
         </li>
       )

@@ -134,6 +134,9 @@
     "formdata-polyfill": "^3.0.20",
     "konva": "^7.2.4",
     "material-ui": "^0.20.2",
-    "react-konva": "^17.0.0-0"
+    "react-bootstrap-icons": "^1.4.0",
+    "react-konva": "^17.0.0-0",
+    "react-router-dom": "^5.2.0",
+    "react-router-redux": "^4.0.8"
   }
 }
