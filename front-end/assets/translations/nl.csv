@@ -152,9 +152,15 @@ configuration:settings:max_cpu,Max CPU
 configuration:settings:max_memory,Max Geheugen
 configuration:settings:name,Naam
 configuration:settings:name_required,Naam is nodig
+configuration:settings:nav_bgcolor,
+configuration:settings:nav_brand_color,
+configuration:settings:nav_text_color,
+configuration:settings:nav_navlink_color,
+configuration:settings:nav_navhover_color,
 configuration:settings:network_address_required,Netwerkadres is nodig
 configuration:settings:network_interface_required,Netwerkinterface is nodig
 configuration:settings:notification,Notificatie
+configuration:settings:require_refresh,
 configuration:settings:rpi_pwm_freq,RPi PWM Frequencie
 configuration:settings:use_https,Gebruik HTTPS
 configuration:tab:about,Over

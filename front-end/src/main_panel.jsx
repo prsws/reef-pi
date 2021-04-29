@@ -21,6 +21,7 @@ import ErrorBoundary from './ui_components/error_boundary'
 import i18n from 'utils/i18n'
 import Instances from 'instances/main'
 import Journal from 'journal/main'
+import { fetchSettings } from 'redux/actions/settings'
 import { ThermometerHalf,
         ClockHistory,
         Gear,
@@ -65,6 +66,7 @@ class mainPanel extends React.Component {
 
   componentDidMount () {
     this.props.fetchUIData()
+    this.props.fetchSettings()
   }
 
   setTab (k) {
@@ -113,8 +115,8 @@ class mainPanel extends React.Component {
     const body = caps[tab].component
     return (
       <div id='content'>
-        <nav className='navbar navbar-dark navbar-reefpi navbar-expand-lg'>
-          <span className='navbar-brand mb-0 h1'>{this.props.info.name}</span>
+        <nav className='navbar navbar-dark navbar-reefpi navbar-expand-lg' style={{backgroundColor: this.props.settings.nav_bgcolor}} >
+          <span className='navbar-brand mb-0 h1' style={{color: this.props.settings.nav_brand_color}} >{this.props.info.name}</span>
           <span className='navbar-brand mb-0 h1 navbar-toggler current-tab'>{tab}</span>
           <button
             className='navbar-toggler'
@@ -159,14 +161,16 @@ const mapStateToProps = state => {
   return {
     capabilities: state.capabilities,
     errors: state.errors,
-    info: state.info
+    info: state.info,
+    settings: state.settings
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     fetchUIData: () => dispatch(fetchUIData(dispatch)),
-    fetchInfo: () => dispatch(fetchInfo(dispatch))
+    fetchInfo: () => dispatch(fetchInfo(dispatch)),
+    fetchSettings: () => dispatch(fetchSettings(dispatch))
   }
 }
 

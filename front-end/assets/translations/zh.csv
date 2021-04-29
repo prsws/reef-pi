@@ -152,9 +152,15 @@ configuration:settings:max_cpu,最大CPU
 configuration:settings:max_memory,最大内存
 configuration:settings:name,名字
 configuration:settings:name_required,必须填写名字
+configuration:settings:nav_bgcolor,
+configuration:settings:nav_brand_color,
+configuration:settings:nav_text_color,
+configuration:settings:nav_navlink_color,
+configuration:settings:nav_navhover_color,
 configuration:settings:network_address_required,必须填写网络地址
 configuration:settings:network_interface_required,必须填写网络接口
 configuration:settings:notification,通知
+configuration:settings:require_refresh,
 configuration:settings:rpi_pwm_freq,树莓派整流器
 configuration:settings:use_https,使用HTTPS
 configuration:tab:about,关于

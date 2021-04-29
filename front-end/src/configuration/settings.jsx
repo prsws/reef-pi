@@ -20,7 +20,9 @@ class settings extends React.Component {
         address: '',
         rpi_pwm_freq: 100,
         blank_panel_bgcolor: '',
-        blank_panel_titlecolor: ''
+        blank_panel_titlecolor: '',
+        nav_bgcolor: '',
+        nav_brand_color: ''
       },
       currentLanguage: i18n.language,
       updated: false
@@ -41,6 +43,8 @@ class settings extends React.Component {
     this.handleSetBPBgColor = this.handleSetBPBgColor.bind(this)
     this.handleSetBPTitleColor = this.handleSetBPTitleColor.bind(this)
     this.toCompactColorPickerRow = this.toCompactColorPickerRow.bind(this)
+    this.handleSetNavBgColor = this.handleSetNavBgColor.bind(this)
+    this.handleSetNavBrandColor = this.handleSetNavBrandColor.bind(this)
   }
 
   checkBoxComponent (attr) {
@@ -147,6 +151,24 @@ class settings extends React.Component {
   handleSetBPTitleColor (ev) {
     const settings = this.state.settings
     settings.blank_panel_titlecolor = ev.target.value
+    this.setState({
+      settings: settings,
+      updated: true
+    })
+  }
+
+  handleSetNavBgColor (ev) {
+    const settings = this.state.settings
+    settings.nav_bgcolor = ev.target.value
+    this.setState({
+      settings: settings,
+      updated: true
+    })
+  }
+
+  handleSetNavBrandColor (ev) {
+    const settings = this.state.settings
+    settings.nav_brand_color = ev.target.value
     this.setState({
       settings: settings,
       updated: true
@@ -343,6 +365,10 @@ class settings extends React.Component {
             <div className='row'>
               <div className='col-lg-6 col-sm-12 h6'>{this.toCompactColorPickerRow(i18n.t('blank_panel_bgcolor'))}</div>
               <div className='col-lg-6 col-sm-12 h6'>{this.toCompactColorPickerRow(i18n.t('blank_panel_titlecolor'))}</div>
+            </div>
+            <div className='row'>
+              <div className='col-lg-6 col-sm-12 h6'>{this.toCompactColorPickerRow(i18n.t('nav_bgcolor'))}</div>
+              <div className='col-lg-6 col-sm-12 h6'>{this.toCompactColorPickerRow(i18n.t('nav_brand_color'))}</div>
             </div>
           </div>
         </div>

@@ -153,9 +153,15 @@ configuration:settings:max_cpu,Max CPU
 configuration:settings:max_memory,Max memory
 configuration:settings:name,Name
 configuration:settings:name_required,Name is required
+configuration:settings:nav_bgcolor,NavBar Background Color
+configuration:settings:nav_brand_color,Brand Color
+configuration:settings:nav_text_color,NavBar Normal Text Color
+configuration:settings:nav_navlink_color,NavBar Active Link Color
+configuration:settings:nav_navhover_color,NavBar Hover Color
 configuration:settings:network_address_required,Network address is required
 configuration:settings:network_interface_required,Network Interface is required
 configuration:settings:notification,Notification
+configuration:settings:require_refresh,Require Refresh after Update
 configuration:settings:rpi_pwm_freq,RPi PWM Frequency
 configuration:settings:use_https,Use HTTPS
 configuration:tab:about,About
