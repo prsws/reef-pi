@@ -10,6 +10,7 @@ aug,
 cancel,cancelar
 charts,
 clear,Limpar
+close,
 color,
 columns,
 configure,Configurar
@@ -25,6 +26,7 @@ enabled,activar
 end_time,
 equipment,
 errors,Erros
+errors_modal,Erros
 feb,
 full_moon,
 health,

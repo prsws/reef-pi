@@ -10,6 +10,7 @@ aug,Aug
 cancel,Cancel
 charts,Charts
 clear,Clear
+close,Close
 color,Color
 columns,Columns
 configure,Configure
@@ -25,6 +26,7 @@ enabled,Enabled
 end_time,End Time
 equipment,Equipment
 errors,Errors
+errors_modal,Errors
 feb,Feb
 full_moon,Full Moon
 health,Health

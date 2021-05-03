@@ -10,6 +10,7 @@ aug,
 cancel,Annuleren
 charts,
 clear,Resetten
+close,
 color,
 columns,
 configure,Instellen
@@ -25,6 +26,7 @@ enabled,Ingeschakeld
 end_time,
 equipment,Apparatuur
 errors,Foutmeldingen
+errors_modal,Foutmeldingen
 feb,
 full_moon,
 health,gezondheid

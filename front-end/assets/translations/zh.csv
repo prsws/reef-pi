@@ -10,6 +10,7 @@ aug,
 cancel,取消
 charts,
 clear,清除
+close,
 color,
 columns,
 configure,配置
@@ -25,6 +26,7 @@ enabled,已启用
 end_time,
 equipment,设备
 errors,错误
+errors_modal,错误
 feb,
 full_moon,
 health,健康

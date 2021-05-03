@@ -4,6 +4,9 @@ import { connect } from 'react-redux'
 class errorTest extends React.Component {
     constructor (props) {
       super(props)
+      this.state = {
+        curTime : new Date().toLocaleString()
+      }
     }
   
     componentDidMount () {
@@ -12,22 +15,22 @@ class errorTest extends React.Component {
     render () {
       console.log('ErrorTest')
       return (
-        <h1>ErrorTest</h1>
+        <div>
+          <h1>ErrorTest</h1>
+          <p>Current Time : {this.state.curTime}</p>
+        </div>
       )
     }
   }
   
   const mapStateToProps = state => {
-    return null
+    return {
+      curTime: state.curTime
+    }
   }
-  
-  const mapDispatchToProps = dispatch => {
-    return null
-  }
-  
+   
   const ErrorTest = connect(
-    mapStateToProps,
-    mapDispatchToProps
+    mapStateToProps
   )(errorTest)
   export default ErrorTest
   
