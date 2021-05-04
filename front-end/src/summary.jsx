@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import i18n from 'utils/i18n'
-import { Route, Link, Redirect } from 'react-router-dom'
-import ErrorsModal from './errors_modal'
+import { Route, Link } from 'react-router-dom'
+import { ErrorsModal } from './errors_modal'
 
 export default class Summary extends React.Component {
   constructor (props) {
@@ -25,6 +25,7 @@ export default class Summary extends React.Component {
     } else {
       errorNotice = <li className='list-inline-item text-danger'><Link to={'/errors'}>{i18n.t('errors')} ({this.props.errors.length})</Link> | </li>
     }
+    const reload=()=>window.location.reload()
     return (
         <div className='container'>
             <nav className='bottom-bar navbar fixed-bottom navbar-light bg-light justify-content-center'>
@@ -38,7 +39,9 @@ export default class Summary extends React.Component {
                 <li className='list-inline-item'><a href='/assets/api.html' target='_blank'>API</a></li>
               </ul>
             </nav>
-            <Route path='/errors' component={ErrorsModal} />
+              <Route path='/errors'>
+                <ErrorsModal show={true} pageReload={reload} />
+              </Route>
         </div>
     )
   }
