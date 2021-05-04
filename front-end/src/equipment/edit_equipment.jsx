@@ -49,7 +49,6 @@ const EditEquipment = ({
   return (
     <form onSubmit={handleSubmit}>
       <div className='row align-items-start'>
-        {deleteAction()}
         <div className='col-12 col-sm-3 col-lg-3 order-sm-1'>
           <label className='mr-2'>{i18next.t('name')}</label>
           <input

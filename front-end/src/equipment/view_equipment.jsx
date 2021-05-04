@@ -16,20 +16,6 @@ const ViewEquipment = ({ equipment, outletName, onStateChange, onDelete, onEdit 
 
   return (
     <div className='row text-center text-md-left'>
-      <div className='col-12 col-sm-6 col-md-4 col-lg-2 order-sm-2 order-md-last order-sm-last'>
-        <button
-          type='button' onClick={onDelete}
-          className='btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2'
-        >
-          {i18next.t('delete')}
-        </button>
-        <button
-          type='button' onClick={onEdit}
-          className='btn btn-sm btn-outline-primary float-right d-block d-sm-inline ml-2'
-        >
-          {i18next.t('edit')}
-        </button>
-      </div>
       <div className='col-12 col-sm-6 col-md-3 col-lg-2 order-sm-1'>
         <b>{equipment.name}</b>
       </div>
