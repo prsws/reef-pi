@@ -32,13 +32,13 @@ const EditEquipment = ({
   const deleteAction = () => {
     if (values.id) {
       return (
-        <div className='col-12 col-sm-2 col-lg-3 order-sm-4 order-lg-last'>
+        <div className='col-12 col-sm-2 col-md-1'>
           <button
             type='button'
             onClick={onDelete}
             className='btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2'
           >
-            Delete
+            {i18next.t('delete')}
           </button>
         </div>
       )
@@ -99,11 +99,10 @@ const EditEquipment = ({
           />
           <ErrorFor errors={errors} touched={touched} name='stay_off_on_boot' />
         </div>
-      </div>
-      <div className='row'>
-        <div className='col-12'>
+        <div className='col-12 col-md-1 col-sm-2'>
           <input type='submit' value={actionLabel} className='btn btn-sm btn-primary float-right mt-1' />
         </div>
+        {deleteAction()}
       </div>
     </form>
   )
