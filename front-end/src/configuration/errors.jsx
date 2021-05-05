@@ -2,6 +2,7 @@ import React from 'react'
 import { fetchErrors, deleteError, deleteErrors } from 'redux/actions/errors'
 import { connect } from 'react-redux'
 import i18n from 'utils/i18n'
+import { Trash } from 'react-bootstrap-icons'
 
 class errors extends React.Component {
   constructor (props) {
@@ -25,11 +26,9 @@ class errors extends React.Component {
           <div className='col-lg-2'>{el.time}</div>
           <div className='col-lg-8'>{el.message}</div>
           <div className='col-lg-1'>
-            <input
-              className='btn btn-sm btn-outline-secondary'
-              defaultValue='X'
-              onClick={() => this.props.delete(el.id)}
-            />
+            <button className='btn btn-sm btn-outline-secondary' onClick={() => this.props.delete(el.id)}>
+              <Trash />
+            </button>
           </div>
         </div>
       )

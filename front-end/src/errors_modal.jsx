@@ -2,6 +2,7 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { Modal } from 'react-bootstrap'
 import { Button } from 'react-bootstrap'
+import Errors from './configuration/errors'
 import i18next from 'i18next'
 
 export class ErrorsModal extends React.Component {
@@ -12,29 +13,34 @@ export class ErrorsModal extends React.Component {
     }
 
     this.handleClose = this.handleClose.bind(this)
-    this.handleShow = this.handleShow.bind(this)
+    this.handleExit = this.handleExit.bind(this)
     this.renderModal = this.renderModal.bind(this)
-  }
-
-
-  handleShow() {
-    this.setState({show: true})
   }
 
   handleClose () {
     window.history.pushState({},'','/')
     this.setState({show: false})
-    this.props.pageReload()
+  }
+
+  handleExit () {
+    this.props.refresh()
   }
 
   renderModal() {
     return (
-        <Modal show={this.state.show} onHide={this.handleClose} backdrop="static">
+        <Modal
+          show={this.state.show}
+          onHide={this.handleClose}
+          onExit={this.handleExit}
+          backdrop='static'
+          scrollable={true}
+          size='xl'
+        >
             <Modal.Header closeButton>
                 <Modal.Title>{i18next.t('errors_modal')}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-
+              <Errors />
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="secondary" onClick={this.handleClose}>
@@ -47,8 +53,25 @@ export class ErrorsModal extends React.Component {
 
   render () {
     return (
-        this.renderModal()
-      )
+      <Modal
+        show={this.state.show}
+        onHide={this.handleClose}
+        onExit={this.handleExit}
+        backdrop="static"
+        >
+        <Modal.Header closeButton>
+          <Modal.Title>{i18next.t('errors_modal')}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Errors />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={this.handleClose}>
+            {i18next.t('close')}
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    )
   }
 }
 

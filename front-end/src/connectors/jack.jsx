@@ -164,7 +164,7 @@ export default class Jack extends React.Component {
 
   render () {
     return (
-      <div className='row border-bottom py-1'>
+      <div className='row border-bottom py-1 list-group-item-action'>
         <div className='col-8 col-md-9'>{this.state.edit ? this.editUI() : this.ui()}</div>
         <div className='col-4 col-md-3'>
           <input

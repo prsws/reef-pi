@@ -64,7 +64,7 @@ export default class Equipment extends React.Component {
 
   render () {
     return (
-      <li className='list-group-item'>
+      <li className='list-group-item-action'>
         {this.state.readOnly === true
           ? <ViewEquipment equipment={this.props.equipment} outletName={this.selectedOutlet().name} onEdit={this.handleToggleEdit} onDelete={this.handleDelete} onStateChange={this.handleUpdate} />
           : <EquipmentForm equipment={this.props.equipment} outlets={this.props.outlets} actionLabel='Save' onSubmit={this.handleSubmit} onUpdate={this.handleUpdate} onDelete={this.handleDelete} />}

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { confirm } from 'utils/confirm'
 import i18next from 'i18next'
 import DriverForm from './driver_form'
+import { Trash, Pencil } from 'react-bootstrap-icons'
 
 export default class Driver extends React.Component {
   constructor (props) {
@@ -100,26 +101,20 @@ export default class Driver extends React.Component {
     let btnEdit = null
     if (!this.state.edit) {
       btnEdit = (
-        <input
-          type='button'
-          className='edit-outlet btn btn-sm btn-outline-primary float-right d-block d-sm-inline ml-2'
-          value={this.state.lbl}
-          onClick={this.handleEdit}
-        />
+        <button className='edit-outlet btn btn-sm btn-outline-primary float-right d-block d-sm-inline ml-2' onClick={this.handleEdit}>
+          <Pencil />
+        </button>
       )
     }
 
     return (
 
-      <div className='row border-bottom py-1'>
+      <div className='row border-bottom py-1 list-group-item-action'>
         <div className='col-8 col-md-9'>{this.state.edit ? this.editUI() : this.ui()}</div>
         <div className='col-4 col-md-3'>
-          <input
-            type='button'
-            className='btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2'
-            value='X'
-            onClick={this.handleRemove}
-          />
+          <button className='btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2' onClick={this.handleRemove}>
+            <Trash />
+          </button>
           {btnEdit}
         </div>
       </div>

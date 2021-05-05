@@ -54,7 +54,7 @@ class Collapsible extends React.Component {
     }
 
     return (
-      <li className='list-group-item'>
+      <li className='list-group-item-action'>
         <div
           className={classNames('row mb-1 text-center text-md-left', {
             pointer: readOnly
