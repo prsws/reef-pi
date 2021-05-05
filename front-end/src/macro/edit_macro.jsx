@@ -7,6 +7,7 @@ import { Field, FieldArray } from 'formik'
 import StepSelector from './step_selector'
 import SelectType from './select_type'
 import BooleanSelect from '../ui_components/boolean_select'
+import { Save } from 'react-bootstrap-icons'
 
 const EditMacro = ({
   values,
@@ -142,12 +143,9 @@ const EditMacro = ({
 
       <div className={classNames('row', { 'd-none': readOnly })}>
         <div className='col-12'>
-          <input
-            type='submit'
-            value='Save'
-            disabled={readOnly}
-            className='btn btn-sm btn-primary float-right mt-1'
-          />
+          <button type='submit' disabled={readOnly} className='btn btn-sm btn-primary float-right mt-1'>
+            <Save />
+          </button>
         </div>
       </div>
     </form>

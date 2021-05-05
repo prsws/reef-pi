@@ -20,6 +20,9 @@ class about extends React.Component {
   render () {
     return (
       <div className='container'>
+        <div className='row'>
+          <label className='h5 font-weight-bold' style={{ textDecoration: 'underline' }}>{i18n.t('configuration:tab:about')}</label>
+        </div>
         <div className='row justify-content-md-center'>
           <div className='card mb-4 box-shadow'>
             <div className='card-header'>

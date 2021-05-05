@@ -7,6 +7,7 @@ import { Field } from 'formik'
 import BooleanSelect from '../ui_components/boolean_select'
 import i18next from 'i18next'
 import ATOChart from './chart'
+import { Save } from 'react-bootstrap-icons'
 
 const EditAto = ({
   values,
@@ -275,12 +276,9 @@ const EditAto = ({
 
       <div className={classNames('row', { 'd-none': readOnly })}>
         <div className='col-12'>
-          <input
-            type='submit'
-            value={i18next.t('save')}
-            disabled={readOnly}
-            className='btn btn-sm btn-primary float-right mt-1'
-          />
+          <button type='submit' disabled={readOnly} className='btn btn-sm btn-primary float-right mt-1'>
+            <Save />
+          </button>
         </div>
       </div>
     </form>

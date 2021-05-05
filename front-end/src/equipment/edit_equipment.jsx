@@ -5,6 +5,7 @@ import { showError } from 'utils/alert'
 import classNames from 'classnames'
 import i18next from 'i18next'
 import { SortByName } from 'utils/sort_by_name'
+import { Trash, Save } from 'react-bootstrap-icons'
 
 const EditEquipment = ({
   values,
@@ -33,12 +34,8 @@ const EditEquipment = ({
     if (values.id) {
       return (
         <div className='col-12 col-sm-2 col-md-1'>
-          <button
-            type='button'
-            onClick={onDelete}
-            className='btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2'
-          >
-            {i18next.t('delete')}
+          <button type='button' onClick={onDelete} className='btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2'>
+            <Trash />
           </button>
         </div>
       )
@@ -99,7 +96,9 @@ const EditEquipment = ({
           <ErrorFor errors={errors} touched={touched} name='stay_off_on_boot' />
         </div>
         <div className='col-12 col-md-1 col-sm-2'>
-          <input type='submit' value={actionLabel} className='btn btn-sm btn-primary float-right mt-1' />
+          <button type='submit' className='btn btn-sm btn-primary float-right mt-1' >
+            <Save />
+          </button>
         </div>
         {deleteAction()}
       </div>

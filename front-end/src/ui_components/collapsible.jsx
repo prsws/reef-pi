@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import Switch from 'react-toggle-switch'
 import i18next from 'i18next'
+import { Trash, Pencil } from 'react-bootstrap-icons'
 
 class Collapsible extends React.Component {
   constructor (props) {
@@ -34,7 +35,7 @@ class Collapsible extends React.Component {
         id={'edit-' + name}
         className='btn btn-sm btn-outline-primary float-right d-block d-sm-inline ml-2'
       >
-        {i18next.t('collapsible:edit')}
+        <Pencil />
       </button>
     )
     const handleSubmit = (values) => {
@@ -54,7 +55,7 @@ class Collapsible extends React.Component {
     }
 
     return (
-      <li className='list-group-item-action'>
+      <li className='list-group-item-action mb-2'>
         <div
           className={classNames('row mb-1 text-center text-md-left', {
             pointer: readOnly
@@ -67,7 +68,7 @@ class Collapsible extends React.Component {
               id={'delete-' + name}
               className='btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2'
             >
-              {i18next.t('collapsible:delete')}
+              <Trash />
             </button>
             {readOnly ? toggleStateButton : null}
             {readOnly ? editButton : null}

@@ -8,6 +8,7 @@ import { Field } from 'formik'
 import BooleanSelect from '../ui_components/boolean_select'
 import Cron from '../ui_components/cron'
 import Percent from '../ui_components/percent'
+import { Save } from 'react-bootstrap-icons'
 
 const EditDoser = ({
   values,
@@ -203,12 +204,9 @@ const EditDoser = ({
 
       <div className={classNames('row', { 'd-none': readOnly })}>
         <div className='col-12'>
-          <input
-            type='submit'
-            value='Save'
-            disabled={readOnly}
-            className='btn btn-sm btn-primary float-right mt-1'
-          />
+          <button type='submit' disabled={readOnly} className='btn btn-sm btn-primary float-right mt-1'>
+            <Save />
+          </button>
         </div>
       </div>
     </form>

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Switch from 'react-toggle-switch'
 import i18next from 'i18next'
+import { Trash, Pencil } from 'react-bootstrap-icons'
 
 const ViewEquipment = ({ equipment, outletName, onStateChange, onDelete, onEdit }) => {
   const toggleState = (e) => {
@@ -45,13 +46,13 @@ const ViewEquipment = ({ equipment, outletName, onStateChange, onDelete, onEdit 
           type='button' onClick={onDelete}
           className='btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2'
         >
-          {i18next.t('delete')}
+          <Trash />
         </button>
         <button
           type='button' onClick={onEdit}
           className='btn btn-sm btn-outline-primary float-right d-block d-sm-inline ml-2'
         >
-          {i18next.t('edit')}
+          <Pencil />
         </button>
       </div>
     </div>

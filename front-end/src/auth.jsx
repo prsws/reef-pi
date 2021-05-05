@@ -55,9 +55,7 @@ class auth extends React.Component {
     return (
       <div className='container'>
         <div className='row'>
-          <label>
-            <b>{i18n.t('configuration:authentication:credentials')}</b>
-          </label>
+          <label className='h5 font-weight-bold' style={{ textDecoration: 'underline' }}>{i18n.t('configuration:tab:authentication')}</label>
         </div>
         <div className='form-group'>
           <label htmlFor='reef-pi-user'>{i18n.t('signin:username')}</label>

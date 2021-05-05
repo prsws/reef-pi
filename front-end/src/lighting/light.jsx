@@ -5,6 +5,7 @@ import { showError } from 'utils/alert'
 import classNames from 'classnames'
 import { Field } from 'formik'
 import { ErrorFor, ShowError } from '../utils/validation_helper'
+import { Save } from 'react-bootstrap-icons'
 
 const EditLight = ({
   values,
@@ -69,13 +70,9 @@ const EditLight = ({
       {channels()}
       <div className={classNames('row', { 'd-none': readOnly })}>
         <div className='col-12'>
-          <input
-            type='submit'
-            value='Save'
-            id={'save-light-' + config.id}
-            disabled={readOnly}
-            className='btn btn-sm btn-primary float-right mt-1'
-          />
+          <button type='submit' id={'save-light-' + config.id} disabled={readOnly} className='btn btn-sm btn-primary float-right mt-1'>
+            <Save />
+          </button>
         </div>
       </div>
     </form>

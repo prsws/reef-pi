@@ -217,6 +217,9 @@ class telemetry extends React.Component {
     }
     return (
       <div className='container'>
+        <div className='row'>
+          <label className='h5 font-weight-bold' style={{ textDecoration: 'underline' }}>{i18n.t('configuration:tab:telemetry')}</label>
+        </div>
         <div className='row'>{this.showAdafruitIO()}</div>
         <div className='row'>{this.showMqtt()}</div>
         <div className='row'>

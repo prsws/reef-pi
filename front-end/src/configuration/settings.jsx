@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import SettingsSchema from './settings_schema'
 import i18n from 'utils/i18n'
 import CompactColorPicker from '../ui_components/compact_color_picker'
+import { Save } from 'react-bootstrap-icons'
 
 class settings extends React.Component {
   constructor (props) {
@@ -278,7 +279,10 @@ class settings extends React.Component {
     }
     return (
       <div className='container'>
-        <div className='row' style={{ border: '1px solid black', marginBottom: '3px', backgroundColor: '#eeeeee' }}>
+        <div className='row'>
+          <label className='h5 font-weight-bold' style={{ textDecoration: 'underline' }}>{i18n.t('configuration:tab:settings')}</label>
+        </div>
+        <div className='row' style={{ border: '1px solid black', marginBottom: '3px' }}>
           <div className='col-12'>
             <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>
               {i18n.t('capabilities:general')}
@@ -334,7 +338,7 @@ class settings extends React.Component {
             </div>
           </div>
         </div>
-        <div className='row' style={{ border: '1px solid black', marginBottom: '3px', backgroundColor: '#eeeeee' }}>
+        <div className='row' style={{ border: '1px solid black', marginBottom: '3px' }}>
           <div className='col-12'>
             <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>
               {i18n.t('capabilities:features')}
@@ -343,7 +347,7 @@ class settings extends React.Component {
             {this.showHealthNotify()}
           </div>
         </div>
-        <div className='row' style={{ border: '1px solid black', marginBottom: '3px', backgroundColor: '#eeeeee' }}>
+        <div className='row' style={{ border: '1px solid black', marginBottom: '3px' }}>
           <div className='col-12'>
             <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>
               {i18n.t('capabilities:miscellaneous')}
@@ -357,7 +361,7 @@ class settings extends React.Component {
             </div>
           </div>
         </div>
-        <div className='row' style={{ border: '1px solid black', marginBottom: '3px', backgroundColor: '#eeeeee' }}>
+        <div className='row' style={{ border: '1px solid black', marginBottom: '3px' }}>
           <div className='col-12'>
             <label className='h6 font-weight-bold' style={{ textDecoration: 'underline' }}>
               {i18n.t('capabilities:ui')}
@@ -373,13 +377,9 @@ class settings extends React.Component {
           </div>
         </div>
         <div className='row'>
-          <input
-            type='button'
-            className={updateButtonClass}
-            onClick={this.handleUpdate}
-            id='systemUpdateSettings'
-            value={i18n.t('update')}
-          />
+          <button className={updateButtonClass} onClick={this.handleUpdate} id='systemUpdateSettings' >
+            <Save />&nbsp;{i18n.t('update')}
+          </button>
         </div>
       </div>
     )

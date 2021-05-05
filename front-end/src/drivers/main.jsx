@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import Driver from './driver'
 import New from './new'
 import { SortByName } from 'utils/sort_by_name'
+import i18next from 'utils/i18n'
 
 class drivers extends React.Component {
   constructor (props) {
@@ -58,6 +59,9 @@ class drivers extends React.Component {
   render () {
     return (
       <div className='container'>
+        <div className='row'>
+          <label className='h5 font-weight-bold' style={{ textDecoration: 'underline' }}>{i18next.t('configuration:tab:drivers')}</label>
+        </div>
         <div className='row mb-1'>
           <div className='col-12'>
             {this.list()}

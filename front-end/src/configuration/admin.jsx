@@ -81,6 +81,9 @@ class admin extends React.Component {
     return (
       <div className='container'>
         <div className='row'>
+          <label className='h5 font-weight-bold' style={{ textDecoration: 'underline' }}>{i18n.t('configuration:tab:admin')}</label>
+        </div>
+        <div className='row'>
           <div className='col-md-12 mt-3 col-lg-3'>
             <button onClick={this.handleSignout} type='button' className={btnClass}>
               {i18n.t('configuration:admin:sign_out')}
