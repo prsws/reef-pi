@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Pin from './pin'
 import i18next from 'i18next'
+import { Save, Pencil, Trash } from 'react-bootstrap-icons'
 
 export default class Outlet extends React.Component {
   constructor (props) {
@@ -12,7 +13,8 @@ export default class Outlet extends React.Component {
       pin: props.pin,
       reverse: props.reverse,
       lbl: i18next.t('edit'),
-      driver: props.driver || {}
+      driver: props.driver || {},
+      icon: <Pencil />
     }
     this.handleEdit = this.handleEdit.bind(this)
     this.editUI = this.editUI.bind(this)
@@ -47,7 +49,8 @@ export default class Outlet extends React.Component {
     if (!this.state.edit) {
       this.setState({
         edit: true,
-        lbl: i18next.t('save')
+        lbl: i18next.t('save'),
+        icon: <Save />
       })
       return
     }
@@ -64,7 +67,8 @@ export default class Outlet extends React.Component {
       lbl: i18next.t('edit'),
       name: payload.name,
       pin: payload.pin,
-      reverse: payload.reverse
+      reverse: payload.reverse,
+      icon: <Pencil />
     })
   }
 
@@ -153,18 +157,12 @@ export default class Outlet extends React.Component {
       <div className='row border-bottom py-1 list-group-item-action'>
         <div className='col-8 col-md-9'>{this.state.edit ? this.editUI() : this.ui()}</div>
         <div className='col-4 col-md-3'>
-          <input
-            type='button'
-            className='btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2'
-            value='X'
-            onClick={this.handleRemove}
-          />
-          <input
-            type='button'
-            className='edit-outlet btn btn-sm btn-outline-primary float-right d-block d-sm-inline ml-2'
-            value={this.state.lbl}
-            onClick={this.handleEdit}
-          />
+          <button className='btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2' onClick={this.handleRemove}>
+            <Trash />
+          </button>
+          <button className='edit-outlet btn btn-sm btn-outline-primary float-right d-block d-sm-inline ml-2' onClick={this.handleEdit}>
+            {this.state.icon}
+          </button>
         </div>
       </div>
     )

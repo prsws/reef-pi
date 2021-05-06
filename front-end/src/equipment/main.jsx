@@ -5,7 +5,6 @@ import { fetchOutlets } from 'redux/actions/outlets'
 import { connect } from 'react-redux'
 import EquipmentForm from './equipment_form'
 import { SortByName } from 'utils/sort_by_name'
-import {PlusSquare, DashSquare} from 'react-bootstrap-icons'
 
 class main extends React.Component {
   constructor (props) {

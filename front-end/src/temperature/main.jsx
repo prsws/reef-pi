@@ -9,6 +9,7 @@ import CalibrationModal from './calibration_modal'
 import i18next from 'i18next'
 import { confirm } from 'utils/confirm'
 import { SortByName } from 'utils/sort_by_name'
+import { Sliders } from 'react-bootstrap-icons'
 
 class main extends React.Component {
   constructor (props) {
@@ -83,7 +84,7 @@ class main extends React.Component {
             className='btn btn-sm btn-outline-info float-right'
             onClick={e => this.calibrateProbe(e, probe)}
           >
-            {i18next.t('temperature:calibrate')}
+            <Sliders />
           </button>
         )
         const handleToggleState = () => {

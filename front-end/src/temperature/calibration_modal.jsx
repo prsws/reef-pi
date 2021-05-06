@@ -5,6 +5,7 @@ import * as Yup from 'yup'
 import { ErrorFor, ShowError } from '../utils/validation_helper'
 import classNames from 'classnames'
 import { withFormik, Field } from 'formik'
+import { Check2Square, XSquare } from 'react-bootstrap-icons'
 
 export class CalibrationForm extends React.Component {
   constructor (props) {
@@ -71,14 +72,14 @@ export class CalibrationForm extends React.Component {
                 className='btn btn-light mr-2'
                 onClick={this.handleCancel}
               >
-                {i18next.t('cancel')}
+                <XSquare />
               </button>
               <button
                 role='confirm'
                 type='submit'
                 className='btn btn-primary'
               >
-                {i18next.t('temperature:calibration:apply')}
+                <Check2Square />
               </button>
             </div>
           </div>

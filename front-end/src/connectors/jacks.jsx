@@ -6,6 +6,7 @@ import { fetchJacks, updateJack, deleteJack, createJack } from 'redux/actions/ja
 import Jack from './jack'
 import i18next from 'i18next'
 import { SortByName } from 'utils/sort_by_name'
+import { Plus } from 'react-bootstrap-icons'
 
 class jacks extends React.Component {
   constructor (props) {
@@ -196,13 +197,9 @@ class jacks extends React.Component {
                 </div>
               </div>
               <div className='col-12 col-md-3 text-right'>
-                <input
-                  type='button'
-                  id='createJack'
-                  value={i18next.t('add')}
-                  onClick={this.handleSave}
-                  className='btn btn-outline-primary col-12 col-md-4'
-                />
+                <button id='createJack' onClick={this.handleSave} className='btn btn-outline-primary col-12 col-md-4'>
+                  <Plus />
+                </button>
               </div>
             </div>
           </div>

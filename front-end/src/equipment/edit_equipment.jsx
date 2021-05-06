@@ -96,7 +96,7 @@ const EditEquipment = ({
           <ErrorFor errors={errors} touched={touched} name='stay_off_on_boot' />
         </div>
         <div className='col-12 col-md-1 col-sm-2'>
-          <button type='submit' className='btn btn-sm btn-primary float-right mt-1' >
+          <button type='submit' className='btn btn-sm btn-primary float-right mt-1'>
             <Save />
           </button>
         </div>

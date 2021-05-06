@@ -6,6 +6,7 @@ import Outlet from './outlet'
 import Pin from './pin'
 import i18next from 'i18next'
 import { SortByName } from 'utils/sort_by_name'
+import { Plus } from 'react-bootstrap-icons'
 
 class outlets extends React.Component {
   constructor (props) {
@@ -184,13 +185,9 @@ class outlets extends React.Component {
             </div>
           </div>
           <div className='col-12 col-md-3 text-right'>
-            <input
-              type='button'
-              id='createOutlet'
-              value={i18next.t('add')}
-              onClick={this.handleSave}
-              className='btn btn-outline-primary col-12 col-md-4'
-            />
+            <button id='createOutlet' onClick={this.handleSave} className='btn btn-outline-primary col-12 col-md-4'>
+              <Plus />
+            </button>
           </div>
         </div>
       </div>

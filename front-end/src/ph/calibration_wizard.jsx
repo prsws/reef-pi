@@ -2,6 +2,7 @@ import React from 'react'
 import Modal from 'modal'
 import Calibrate from './calibrate'
 import i18next from 'i18next'
+import { Check2Square, XSquare } from 'react-bootstrap-icons'
 
 export default class CalibrationWizard extends React.Component {
   constructor (props) {
@@ -74,7 +75,7 @@ export default class CalibrationWizard extends React.Component {
     if (this.state.midCalibrated === false) {
       cancelButton = (
         <button role='abort' type='button' className='btn btn-light mr-2' onClick={this.handleCancel}>
-          {i18next.t('cancel')}
+          <XSquare />
         </button>
       )
     }
@@ -111,7 +112,7 @@ export default class CalibrationWizard extends React.Component {
           <div className='text-center'>
             {cancelButton}
             <button role='confirm' type='button' className='btn btn-primary' ref='confirm' onClick={this.handleConfirm}>
-              {i18next.t('done')}
+              <Check2Square />
             </button>
           </div>
         </div>

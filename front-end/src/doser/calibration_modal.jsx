@@ -2,6 +2,7 @@ import React from 'react'
 import $ from 'jquery'
 import Modal from 'modal'
 import CalibrateForm from './calibrate'
+import { Check2Square } from 'react-bootstrap-icons'
 
 export default class CalibrationModal extends React.Component {
   constructor (props) {
@@ -52,7 +53,7 @@ export default class CalibrationModal extends React.Component {
         <div className='modal-footer'>
           <div className='text-center'>
             <button role='confirm' type='button' className='btn btn-primary' ref={this.props.confirm} onClick={this.handleConfirm}>
-              Done
+              <Check2Square />
             </button>
           </div>
         </div>

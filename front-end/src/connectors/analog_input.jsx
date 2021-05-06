@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Pin from './pin'
 import i18next from 'i18next'
+import { Save, Pencil, Trash } from 'react-bootstrap-icons'
 
 export default class AnalogInput extends React.Component {
   constructor (props) {
@@ -11,7 +12,8 @@ export default class AnalogInput extends React.Component {
       name: props.name,
       pin: props.pin,
       lbl: 'edit',
-      driver: props.driver || {}
+      driver: props.driver || {},
+      icon: <Pencil />
     }
     this.handleEdit = this.handleEdit.bind(this)
     this.editUI = this.editUI.bind(this)
@@ -41,7 +43,8 @@ export default class AnalogInput extends React.Component {
     if (!this.state.edit) {
       this.setState({
         edit: true,
-        lbl: i18next.t('save')
+        lbl: i18next.t('save'),
+        icon: <Save />
       })
       return
     }
@@ -54,7 +57,8 @@ export default class AnalogInput extends React.Component {
     this.setState({
       edit: false,
       lbl: i18next.t('edit'),
-      name: payload.name
+      name: payload.name,
+      icon: <Pencil />
     })
   }
 
@@ -133,18 +137,12 @@ export default class AnalogInput extends React.Component {
       <div className='row border-bottom py-1 list-group-item-action'>
         <div className='col-8 col-md-9'>{this.state.edit ? this.editUI() : this.ui()}</div>
         <div className='col-4 col-md-3 mb-'>
-          <input
-            type='button'
-            className='analog_input-remove btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2'
-            value='X'
-            onClick={this.handleRemove}
-          />
-          <input
-            type='button'
-            className='analog_input-edit btn btn-sm btn-outline-primary float-right d-block d-sm-inline ml-2'
-            value={this.state.lbl}
-            onClick={this.handleEdit}
-          />
+          <button className='analog_input-remove btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2' onClick={this.handleRemove}>
+            <Trash />
+          </button>
+          <button className='analog_input-edit btn btn-sm btn-outline-primary float-right d-block d-sm-inline ml-2' onClick={this.handleEdit}>
+            {this.state.icon}
+          </button>
         </div>
       </div>
     )

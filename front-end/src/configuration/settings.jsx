@@ -377,7 +377,7 @@ class settings extends React.Component {
           </div>
         </div>
         <div className='row'>
-          <button className={updateButtonClass} onClick={this.handleUpdate} id='systemUpdateSettings' >
+          <button className={updateButtonClass} onClick={this.handleUpdate} id='systemUpdateSettings'>
             <Save />&nbsp;{i18n.t('update')}
           </button>
         </div>

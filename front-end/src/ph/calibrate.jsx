@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import { withFormik, Field } from 'formik'
 import { FaCheck } from 'react-icons/fa'
 import { IconContext } from 'react-icons'
-import i18next from 'i18next'
+import { PlayBtn } from 'react-bootstrap-icons'
 
 export const Calibrate = ({ values, errors, touched, label, submitForm, complete, readOnly }) => {
   const handleSubmit = event => {
@@ -41,12 +41,9 @@ export const Calibrate = ({ values, errors, touched, label, submitForm, complete
               </IconContext.Provider>
               )
             : (
-              <input
-                type='submit'
-                disabled={readOnly}
-                value={i18next.t('ph:run_calibration')}
-                className='btn btn-sm btn-outline-primary'
-              />
+              <button type='submit' disabled={readOnly} className='btn btn-sm btn-outline-primary'>
+                <PlayBtn />
+              </button>
               )}
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { showError } from 'utils/alert'
 import i18next from 'i18next'
+import { Save, Pencil, Trash } from 'react-bootstrap-icons'
 
 export default class Jack extends React.Component {
   constructor (props) {
@@ -13,7 +14,8 @@ export default class Jack extends React.Component {
       driver: props.driver,
       reverse: props.reverse,
       lbl: 'edit',
-      driver_name: (props.drivers.filter(d => d.id === props.driver)[0] || {}).name
+      driver_name: (props.drivers.filter(d => d.id === props.driver)[0] || {}).name,
+      icon: <Pencil />
     }
     this.handleEdit = this.handleEdit.bind(this)
     this.editUI = this.editUI.bind(this)
@@ -48,7 +50,8 @@ export default class Jack extends React.Component {
     if (!this.state.edit) {
       this.setState({
         edit: true,
-        lbl: 'save'
+        lbl: 'save',
+        icon: <Save />
       })
       return
     }
@@ -71,7 +74,8 @@ export default class Jack extends React.Component {
     this.setState({
       edit: false,
       lbl: 'edit',
-      pins: payload.pins.join(',')
+      pins: payload.pins.join(','),
+      icon: <Pencil />
     })
   }
 
@@ -167,18 +171,12 @@ export default class Jack extends React.Component {
       <div className='row border-bottom py-1 list-group-item-action'>
         <div className='col-8 col-md-9'>{this.state.edit ? this.editUI() : this.ui()}</div>
         <div className='col-4 col-md-3'>
-          <input
-            type='button'
-            className='jack-remove btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2'
-            value='X'
-            onClick={this.handleRemove}
-          />
-          <input
-            type='button'
-            className='jack-edit btn btn-sm btn-outline-primary float-right d-block d-sm-inline ml-2'
-            value={this.state.lbl}
-            onClick={this.handleEdit}
-          />
+          <button className='jack-remove btn btn-sm btn-outline-danger float-right d-block d-sm-inline ml-2' onClick={this.handleRemove}>
+            <Trash />
+          </button>
+          <button className='jack-edit btn btn-sm btn-outline-primary float-right d-block d-sm-inline ml-2' onClick={this.handleEdit}>
+            {this.state.icon}
+          </button>
         </div>
       </div>
     )

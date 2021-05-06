@@ -7,7 +7,7 @@ import { Field, FieldArray } from 'formik'
 import StepSelector from './step_selector'
 import SelectType from './select_type'
 import BooleanSelect from '../ui_components/boolean_select'
-import { Save } from 'react-bootstrap-icons'
+import { Save, Plus, Dash } from 'react-bootstrap-icons'
 
 const EditMacro = ({
   values,
@@ -116,7 +116,7 @@ const EditMacro = ({
                           onClick={() => arrayHelpers.remove(index)}
                           disabled={readOnly}
                         >
-                          X
+                          <Dash />
                         </button>
                       </div>
                     </div>
@@ -128,11 +128,10 @@ const EditMacro = ({
                   <button
                     type='button'
                     className='btn btn-outline-success float-right'
-                    value='+'
                     onClick={() => arrayHelpers.push({ duration: '', id: '', on: '', title: '', message: '' })}
                     id='add-step'
                   >
-                    +
+                    <Plus />
                   </button>
                 </div>
               </div>
