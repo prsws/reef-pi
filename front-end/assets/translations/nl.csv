@@ -31,6 +31,7 @@ feb,
 full_moon,
 health,gezondheid
 height,
+hours,
 import_db,
 in-use,In gebruik
 inlet,Ingang (inlet)
@@ -48,6 +49,7 @@ mar,
 maximum,
 may,
 minimum,
+minutes,
 name,Naam
 none,Niets
 nov,
@@ -67,6 +69,7 @@ running,Actief
 save,Opslaan
 schedule,
 sec,sec
+seconds,
 second_s,second(en)
 select,Selecteren
 select_file,

@@ -31,6 +31,7 @@ feb,Feb
 full_moon,Full Moon
 health,Health
 height,Height
+hours,Hours
 import_db,Import Database
 in-use,in-use
 inlet,Inlet
@@ -49,6 +50,7 @@ mar,Mar
 maximum,Maximum
 may,May
 minimum,Minimum
+minutes,Minutes
 name,Name
 none,None
 nov,Nov
@@ -68,6 +70,7 @@ running,running
 save,Save
 schedule,Schedule
 sec,sec
+seconds,Seconds
 second_s,second(s)
 select,Select
 select_file,Please select a file

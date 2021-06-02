@@ -31,6 +31,7 @@ feb,
 full_moon,
 health,健康
 height,
+hours,
 import_db,
 in-use,正在使用
 inlet,入口
@@ -48,6 +49,7 @@ mar,
 maximum,
 may,
 minimum,
+minutes,
 name,名字
 none,空
 nov,
@@ -67,6 +69,7 @@ running,运行中
 save,保存
 schedule,
 sec,秒
+seconds,
 second_s,秒
 select,选择
 select_file,

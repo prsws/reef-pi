@@ -31,6 +31,7 @@ feb,
 full_moon,
 health,
 height,
+hours,
 import_db,
 in-use,
 inlet,ورودی
@@ -48,6 +49,7 @@ mar,
 maximum,
 may,
 minimum,
+minutes,
 name,نام
 none,هیچ یک
 nov,
@@ -67,6 +69,7 @@ running,دویدن
 save,ذخیره
 schedule,
 sec,
+seconds,
 second_s,
 select,انتخاب کنید
 select_file,

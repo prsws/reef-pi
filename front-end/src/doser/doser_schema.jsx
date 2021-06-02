@@ -24,7 +24,9 @@ const DoserSchema = Yup.object().shape({
   minute: Yup.string()
     .required('Minute is required'),
   second: Yup.string()
-    .required('Second is required')
+    .required('Second is required'),
+  chart_y_scale: Yup.string()
+    .required('Chart unit is required')
 })
 
 export default DoserSchema

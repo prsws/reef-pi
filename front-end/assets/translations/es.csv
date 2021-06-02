@@ -31,6 +31,7 @@ feb,Feb
 full_moon,Luna Llena
 health,Estado
 height,Altura
+hours,Horas
 import_db,Extraer Base de Datos
 in-use,en-uso
 inlet,Entrada
@@ -48,6 +49,7 @@ mar,Mar
 maximum,Máximo
 may,May
 minimum,Mínimo
+minutes,Minutos
 name,Nombre
 none,Ninguno
 nov,Nov
@@ -67,6 +69,7 @@ running,Ejecutando
 save,Guardar
 schedule,Horario
 sec,seg
+seconds,Segundos
 second_s,segundo(s)
 select,Seleccionar
 select_file,Por favor seleccione un archivo

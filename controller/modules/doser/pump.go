@@ -13,11 +13,12 @@ import (
 
 // swagger:model pump
 type Pump struct {
-	ID       string         `json:"id"`
-	Name     string         `json:"name"`
-	Jack     string         `json:"jack"`
-	Pin      int            `json:"pin"`
-	Regiment DosingRegiment `json:"regiment"`
+	ID          string         `json:"id"`
+	Name        string         `json:"name"`
+	Jack        string         `json:"jack"`
+	Pin         int            `json:"pin"`
+	Regiment    DosingRegiment `json:"regiment"`
+	ChartYScale int            `json:"chart_y_scale"`
 }
 
 func (c *Controller) Get(id string) (Pump, error) {

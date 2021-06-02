@@ -9,6 +9,7 @@ import BooleanSelect from '../ui_components/boolean_select'
 import Cron from '../ui_components/cron'
 import Percent from '../ui_components/percent'
 import { Save } from 'react-bootstrap-icons'
+// import { mapValues } from 'lodash'
 
 const EditDoser = ({
   values,
@@ -39,6 +40,21 @@ const EditDoser = ({
 
   const jackOptions = () => {
     return jacks.map(item => {
+      return (
+        <option key={item.id} value={item.id}>
+          {item.name}
+        </option>
+      )
+    })
+  }
+
+  const chartYScaleOptions = () => {
+    const yScaleOptions = [
+      { id: 1, name: 'seconds' },
+      { id: 60, name: 'minutes' },
+      { id: 3600, name: 'hours' }
+    ]
+    return yScaleOptions.map(item => {
       return (
         <option key={item.id} value={item.id}>
           {item.name}
@@ -184,6 +200,24 @@ const EditDoser = ({
               </div>
               <ErrorFor errors={errors} touched={touched} name='speed' />
             </div>
+          </div>
+        </div>
+
+        <div className='col-12 col-sm-6 col-md-3'>
+          <div className='form-group'>
+            <label htmlFor='chart_y_scale'>Chart Unit</label>
+            <Field
+              name='chart_y_scale'
+              component='select'
+              disabled={readOnly}
+              className={classNames('custom-select', {
+                'is-invalid': ShowError('chart_y_scale', touched, errors)
+              })}
+            >
+              <option value='' className='d-none'>-- Select --</option>
+              {chartYScaleOptions()}
+            </Field>
+            <ErrorFor errors={errors} touched={touched} name='chart_y_scale' />
           </div>
         </div>
       </div>

@@ -73,6 +73,7 @@ class doser extends React.Component {
       name: values.name,
       jack: values.jack,
       pin: parseInt(values.pin),
+      chart_y_scale: parseInt(values.chart_y_scale),
       regiment: {
         enable: values.enable,
         duration: parseFloat(values.duration),

@@ -4,7 +4,7 @@ import { fetchDoserUsage } from '../redux/actions/doser'
 import { connect } from 'react-redux'
 import i18next from 'i18next'
 import { ParseXAxisDate } from 'utils/parse_x_axis_date'
-
+import { OneDecimalParse } from 'utils/one_decimal_parse'
 class chart extends React.Component {
   constructor (props) {
     super(props)
@@ -27,6 +27,25 @@ class chart extends React.Component {
     }
   }
 
+  getYUnits (yscale) {
+    switch (yscale) {
+      case 60:
+        return i18next.t('minutes')
+      case 3600:
+        return i18next.t('hours')
+      default:
+        return i18next.t('seconds')
+    }
+  }
+
+  scaledUsage () {
+    const su = []
+    this.props.usage.historical.forEach((el) => {
+      su.push({ pump: el.pump / this.props.config.chart_y_scale, time: el.time })
+    })
+    return su
+  }
+
   render () {
     if (this.props.usage === undefined) {
       return <div />
@@ -34,15 +53,16 @@ class chart extends React.Component {
     if (this.props.config === undefined) {
       return <div />
     }
-    return (
+
+  return (
       <>
         <span className='h6'>{this.props.config.name} - Doser Usage</span>
         <ResponsiveContainer height={this.props.height} width='100%'>
-          <BarChart data={this.props.usage.historical}>
+          <BarChart data={this.scaledUsage()}>
             <Bar dataKey='pump' fill='#33b5e5' isAnimationActive={false} />
-            <YAxis label={{ value: i18next.t('second_s'), angle: -90, position: 'insideLeft' }} />
             <XAxis dataKey='time' tickFormatter={timeStr => [ParseXAxisDate(timeStr)]} />
-            <Tooltip labelFormatter={label => [ParseXAxisDate(label)]} />
+            <YAxis label={{ value: this.getYUnits(this.props.config.chart_y_scale), angle: -90, position: 'insideLeft' }} />
+            <Tooltip labelFormatter={label => [ParseXAxisDate(label)]} formatter={(value) => [OneDecimalParse(value)]} />
           </BarChart>
         </ResponsiveContainer>
       </>
