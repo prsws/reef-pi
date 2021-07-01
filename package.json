@@ -131,7 +131,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "form-data": "^4.0.0",
-    "formdata-polyfill": "^3.0.20",
+    "formdata-polyfill": "^4.0.6",
     "konva": "^7.2.5",
     "material-ui": "^0.20.2",
     "react-konva": "^17.0.0-0"
